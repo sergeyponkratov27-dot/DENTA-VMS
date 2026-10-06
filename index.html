@@ -45,8 +45,18 @@ h2.sec-title{font-size:clamp(24px,4vw,38px);font-weight:800;letter-spacing:-.02e
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:14px;font-weight:700;font-size:14.5px;border:none;cursor:pointer;font-family:inherit;transition:all .3s cubic-bezier(.2,.8,.2,1);white-space:nowrap}
 .btn-dark{background:var(--ink);color:#fff;box-shadow:0 10px 26px rgba(44,44,44,.22)}
 .btn-dark:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 16px 40px rgba(44,44,44,.3)}
-.btn-champ{background:linear-gradient(120deg,#f0e9dd,#b9a98a);color:#2c2414;box-shadow:0 10px 26px rgba(185,169,138,.35)}
-.btn-champ:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 16px 40px rgba(185,169,138,.5)}
+.btn-champ{
+  background:linear-gradient(135deg,#3a4a5c,#232f3d);
+  color:#f4f1ea;
+  border:1.5px solid rgba(244,241,234,.45);
+  box-shadow:0 10px 26px rgba(35,47,61,.35);
+}
+.btn-champ:hover{
+  transform:translateY(-2px) scale(1.02);
+  background:linear-gradient(135deg,#47596e,#2c3a4a);
+  border-color:rgba(244,241,234,.85);
+  box-shadow:0 16px 40px rgba(35,47,61,.55);
+}
 .btn-line{background:transparent;color:var(--ink);border:1px solid var(--ink)}
 .btn-line:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
 #splash{position:fixed;inset:0;z-index:900;background:linear-gradient(180deg,#fbfcfc 0%,#f2f4f4 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:26px;transition:opacity .8s ease,visibility .8s;cursor:pointer;overflow:hidden}
@@ -98,8 +108,8 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 #mobileMenu{display:none;position:fixed;top:64px;left:0;right:0;z-index:190;background:rgba(250,248,243,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:20px;flex-direction:column;gap:13px}
 #mobileMenu.open{display:flex}
 #mobileMenu a.mnav{font-size:15px;color:var(--ink);padding:6px 0}
-.hero{padding:110px 0 50px;display:flex;flex-direction:column;gap:44px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:34px;align-items:center}
+.hero{padding:90px 0 40px;display:flex;flex-direction:column;gap:36px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:34px;align-items:start}
 .hero-grid>div:first-child{position:relative;z-index:2}
 .hero h1{font-family:'Inter','Montserrat',sans-serif;font-size:clamp(28px,4.2vw,44px);font-weight:800;line-height:1.2;letter-spacing:-.02em;margin-bottom:16px;color:var(--ink);max-width:900px}
 .hero h1 em{font-style:normal;background:linear-gradient(100deg,#2c2c2c 0%,#b9a98a 45%,#8d8d94 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:metalSheen 8s linear infinite}
@@ -114,7 +124,7 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .hero-note{color:var(--muted);font-size:13px;margin-top:15px}
 .hero-visual{position:relative;width:calc(100% + 110px);margin-left:-110px;z-index:1}
 .hero-visual::before{content:"";position:absolute;z-index:1;inset:0 auto 0 -1px;width:300px;background:linear-gradient(90deg,var(--bg) 0%,rgba(250,248,243,.82) 30%,rgba(250,248,243,.3) 68%,transparent 100%);pointer-events:none}
-.photo-wrap{border-radius:26px;box-shadow:var(--shadow-hi);border:6px solid #fff;aspect-ratio:4/4.4;object-fit:cover;width:100%;background:linear-gradient(160deg,#f8f9f9 0%,#e9ecea 45%,#cfc6b8 100%);position:relative;overflow:hidden}
+.photo-wrap{border-radius:26px;box-shadow:var(--shadow-hi);border:6px solid #fff;aspect-ratio:4/3;object-fit:cover;width:100%;background:linear-gradient(160deg,#f8f9f9 0%,#e9ecea 45%,#cfc6b8 100%);position:relative;overflow:hidden}
 .photo-wrap .photo{width:100%;height:100%;object-fit:cover;border-radius:0;border:0;box-shadow:none;aspect-ratio:auto;display:block}
 .photo-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 34%,rgba(255,255,255,.4) 50%,transparent 64%);transform:translateX(-70%);animation:photoSheen 6s ease-in-out infinite;pointer-events:none}
 @keyframes photoSheen{0%,55%{transform:translateX(-80%)}90%,100%{transform:translateX(80%)}}
@@ -142,6 +152,13 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .dir-circle:hover .ic{transform:scale(1.12) translateY(-4px);border-color:var(--wood);box-shadow:0 16px 34px rgba(185,169,138,.35)}
 .dir-circle:hover .ic svg{stroke:var(--wood)}
 .dir-circle:active .ic{transform:scale(.96)}
+.dir-circle.active .ic{
+  border-color:var(--wood);
+  box-shadow:0 16px 34px rgba(185,169,138,.35);
+  transform:scale(1.1) translateY(-4px);
+}
+.dir-circle.active .ic svg{stroke:var(--wood)}
+.dir-circle.active span{color:var(--ink);font-weight:700}
 #prices{background:var(--bg2)}
 #prices::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;z-index:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='200'%3E%3Cg fill='none' stroke='%23c8a97e' stroke-width='1.1' opacity='.4'%3E%3Cpath d='M40 30c-7-6-18-5-23 2-6 8-5 19 1 28 3 5 6 10 7 16 .8 4 3 7 6.5 7 4 0 6-3.5 6-7.6V59h4.6v16.4c0 4.1 2 7.6 6 7.6 3.5 0 5.7-3 6.5-7 1-6 4-11 7-16 6.6-9.4 7.4-20.4 1.5-28-5-7-16-8-23-2z'/%3E%3C/g%3E%3C/svg%3E")}
 #prices::after{content:"";position:absolute;top:0;right:0;bottom:0;width:55%;pointer-events:none;z-index:1;background-image:linear-gradient(to right,var(--bg2) 0%,rgba(242,244,244,.85) 30%,rgba(242,244,244,0) 70%),url("dental-tools.jpg");background-repeat:no-repeat,no-repeat;background-position:left center,right center;background-size:100% 100%,auto 100%}
@@ -763,6 +780,48 @@ window.addEventListener('scroll', () => {
   const b = document.getElementById('fabBar');
   if (b) b.classList.toggle('show', window.scrollY > 800);
 });
+// ============================================================
+// Открытие направления по клику на кружок
+// ============================================================
+function openDir(i) {
+  document.querySelectorAll('.acc.open').forEach(x => x.classList.remove('open'));
+  const acc = document.getElementById('acc' + i);
+  if (!acc) return;
+  acc.classList.add('open');
+  document.querySelectorAll('.dir-circle').forEach((btn, idx) => {
+    btn.classList.toggle('active', idx === i);
+  });
+  setTimeout(() => {
+    acc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 120);
+}
+
+// ============================================================
+// Рука-подсказка над кружками
+// ============================================================
+function initGloveHint() {
+  const glove = document.getElementById('glove');
+  if (!glove) return;
+  const wrap = glove.closest('.dirs-wrap');
+  const circles = wrap.querySelectorAll('.dir-circle');
+  if (!circles.length) return;
+  const SIZE = 34;
+  function place(i) {
+    const wr = wrap.getBoundingClientRect();
+    const cr = circles[i].getBoundingClientRect();
+    glove.style.left = (cr.left - wr.left + cr.width / 2 - SIZE / 2) + 'px';
+    glove.style.top  = (cr.top  - wr.top  + cr.height / 2 - SIZE / 2) + 'px';
+  }
+  glove.classList.add('on');
+  let idx = 0;
+  place(idx);
+  setInterval(() => {
+    idx = (idx + 1) % circles.length;
+    place(idx);
+  }, 1500);
+  window.addEventListener('resize', () => place(idx));
+}
+window.addEventListener('DOMContentLoaded', initGloveHint);
 </script>
 </body>
 </html>
