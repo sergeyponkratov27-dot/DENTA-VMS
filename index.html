@@ -328,6 +328,63 @@ footer a:hover{color:var(--wood)}
 .privacy-link{color:var(--wood);font-weight:600;text-decoration:none}
 .privacy-link:hover{text-decoration:underline}
 @media(max-width:768px){.privacy-header{flex-direction:column;gap:20px;align-items:flex-start}.privacy-title{font-size:2rem}}
+/* ============================================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ (планшеты и телефоны)
+   ============================================================ */
+
+/* --- Планшеты (до 992px) --- */
+@media (max-width: 992px) {
+  .team { grid-template-columns: repeat(2, 1fr); }
+  .reviews { grid-template-columns: repeat(2, 1fr); }
+  .trust-bar { grid-template-columns: repeat(2, 1fr); }
+  .hero-grid { gap: 20px; }
+  .hero-visual { width: 100%; margin-left: 0; }
+  .hero-visual::before { display: none; }
+}
+
+/* --- Телефоны (до 768px) --- */
+@media (max-width: 768px) {
+  /* Шапка: прячем всё лишнее, оставляем только логотип и бургер */
+  .h-phone, .h-messengers, .h-actions .btn-dark { display: none; }
+  .burger { display: block; }
+
+  /* Hero: одна колонка */
+  .hero { padding: 90px 0 30px; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: clamp(28px, 7vw, 38px); }
+  .hero-pains { grid-template-columns: 1fr; text-align: left; }
+  .pain:nth-child(3) { grid-column: auto; justify-content: flex-start; }
+  .pain:nth-child(3) span { align-items: flex-start; }
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn { width: 100%; }
+  
+  /* Картинка и рейтинг */
+  .hero-visual { margin-top: 20px; }
+  .photo-wrap { aspect-ratio: 4/3.5; }
+  .rating-chip { position: static; margin-top: 15px; display: inline-flex; }
+
+  /* Сетки: всё в одну колонку */
+  .team, .reviews, .trust-bar { grid-template-columns: 1fr; }
+  .maplead { grid-template-columns: 1fr; }
+  .map-box { min-height: 320px; }
+
+  /* Карточки врачей: убираем наложение */
+  .doc .info { margin-top: 0; }
+  .doc .ph::after { background: linear-gradient(180deg,transparent 65%,rgba(250,248,243,.98)); }
+  .doc .info p { min-height: auto; }
+
+  /* Аккордеон цен: цена и кнопка в столбик, чтобы не обрезались */
+  .price-row { flex-wrap: wrap; }
+  .price-row .pr { width: 100%; }
+  .price-row .go { width: 100%; margin-top: 6px; }
+
+  /* Скрываем руку-подсказку, чтобы не мешала на маленьком экране */
+  .glove { display: none; }
+
+  /* Плавающие кнопки */
+  #fabBar { right: 12px; bottom: 12px; }
+  .fab { padding: 10px 14px; font-size: 12px; }
+}
 </style>
 </head>
 <body>
