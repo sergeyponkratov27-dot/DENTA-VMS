@@ -21,14 +21,14 @@
 <meta name="format-detection" content="telephone=no" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":["MedicalBusiness","Dentist"],"name":"Стоматологическая клиника Denta V","slogan":"Улыбайтесь вместе с Denta V","url":"https://dentav.ru","telephone":"+7-930-911-55-00","priceRange":"₽₽","medicalSpecialty":"Dentistry","address":{"@type":"PostalAddress","addressCountry":"RU","addressLocality":"Москва","streetAddress":"ул. Болотниковская, 1, корпус 2, помещение 2/1","postalCode":"117556"},"geo":{"@type":"GeoCoordinates","latitude":55.6593,"longitude":37.6016},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"312"},"founder":{"@type":"Physician","name":"Вербицкий Владимир","jobTitle":"Врач-стоматолог высшей категории","telephone":"+7-930-911-55-00","sameAs":["https://t.me/verbeets"]},"employee":[{"@type":"Physician","name":"Вербицкий Владимир","jobTitle":"Стоматолог-терапевт, имплантолог"},{"@type":"Physician","name":"Соколова Анна","jobTitle":"Ортодонт"},{"@type":"Physician","name":"Громов Дмитрий","jobTitle":"Хирург-имплантолог"},{"@type":"Physician","name":"Лебедева Мария","jobTitle":"Детский стоматолог"}]}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#fbfcfc;--bg2:#f2f4f4;--card:#fff;--ink:#26282a;--ink-soft:#555;--muted:#8d8d94;--line:#e4e8e7;--champagne:#e8dfd2;--wood:#b9a98a;--radius:18px;--shadow:0 18px 50px rgba(44,44,44,.10);--shadow-hi:0 24px 60px rgba(44,44,44,.16)}
+:root{--bg:#fbfcfc;--bg2:#f2f4f4;--card:#fff;--ink:#26282a;--ink-soft:#555;--muted:#8d8d94;--line:#e4e8e7;--champagne:#e8dfd2;--wood:#b9a98a;--radius:18px;--shadow:0 10px 30px rgba(38,40,42,.06);--shadow-hi:0 26px 70px -24px rgba(38,40,42,.28)}
 html{scroll-behavior:smooth}
 body{font-family:'Montserrat','Segoe UI',Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;background-color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='200' viewBox='0 0 260 200'%3E%3Cg fill='none' stroke='%23c9d4d0' stroke-width='1.2'%3E%3Cpath d='M40 30c-7-6-18-5-23 2-6 8-5 19 1 28 3 5 6 10 7 16 .8 4 3 7 6.5 7 4 0 6-3.5 6-7.6V59h4.6v16.4c0 4.1 2 7.6 6 7.6 3.5 0 5.7-3 6.5-7 1-6 4-11 7-16 6.6-9.4 7.4-20.4 1.5-28-5-7-16-8-23-2z' transform='scale(.9) translate(6 10)' opacity='.5'/%3E%3Cpath d='M200 120c-6-5-15-4-19 2-5 6-4 16 1 23 3 4 5 8 6 13 .7 3 2.6 6 5.4 6 3.3 0 5-3 5-6.3v-9.7h3.8v9.7c0 3.3 1.7 6.3 5 6.3 2.8 0 4.7-3 5.4-6 1-5 3-9 6-13 5.5-7.8 6.2-16.8 1.2-23-4-6-13-7-19-2z' opacity='.35'/%3E%3Ccircle cx='150' cy='40' r='2.4'/%3E%3Ccircle cx='225' cy='70' r='2'/%3E%3Ccircle cx='70' cy='160' r='2.2'/%3E%3C/g%3E%3C/svg%3E")}
@@ -84,7 +84,6 @@ h2.sec-title{font-family:'Playfair Display','Montserrat',serif;font-size:clamp(2
 @keyframes dotPop{to{opacity:1}}
 .sp-tag{color:var(--muted);font-size:12.5px;letter-spacing:.38em;text-transform:uppercase;position:relative;z-index:2;opacity:0;animation:fadeUp2 .7s ease forwards 2s}
 @keyframes fadeUp2{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-/* sp-skip удалён — интро закрывается автоматически */
 header{position:fixed;top:0;left:0;right:0;z-index:200;transition:all .35s;padding:16px 0}
 header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-shadow:0 6px 30px rgba(44,44,44,.07);padding:10px 0}
 .hrow{display:flex;align-items:center;justify-content:space-between;gap:16px}
@@ -97,8 +96,8 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .logo-tx b{font-size:22px;font-weight:800;letter-spacing:.03em;background:linear-gradient(105deg,#8d8d94 0%,#2c2c2c 30%,#b9a98a 50%,#2c2c2c 70%,#8d8d94 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:metalSheen 7s linear infinite}
 .logo-tx b span{-webkit-text-fill-color:transparent}
 .h-actions{display:flex;align-items:center;gap:13px}
-.h-phone{font-size:16px;font-weight:700;color:var(--ink);transition:color .25s}
-.h-phone:hover{color:var(--wood)}
+.h-phone{font-size:16px;font-weight:700;color:var(--ink);transition:color .25s,background-size .35s;background:linear-gradient(currentColor,currentColor) left 100%/0 1px no-repeat}
+.h-phone:hover{color:var(--wood);background-size:100% 1px}
 .h-messengers{display:flex;gap:8px}
 .mess{width:37px;height:37px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--line);transition:all .3s;box-shadow:var(--shadow)}
 .mess:hover{transform:scale(1.12) translateY(-2px);border-color:var(--wood)}
@@ -108,23 +107,25 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 #mobileMenu{display:none;position:fixed;top:64px;left:0;right:0;z-index:190;background:rgba(250,248,243,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:20px;flex-direction:column;gap:13px}
 #mobileMenu.open{display:flex}
 #mobileMenu a.mnav{font-size:15px;color:var(--ink);padding:6px 0}
-.hero{padding:90px 0 40px;display:flex;flex-direction:column;gap:36px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:34px;align-items:start}
+.hero{padding:136px 0 72px;display:flex;flex-direction:column;gap:56px}
+.hero::before{content:"";position:absolute;top:-160px;left:-12%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(185,169,138,.18),rgba(185,169,138,0) 62%);pointer-events:none;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
 .hero-grid>div:first-child{position:relative;z-index:2}
-.hero h1{font-family:'Playfair Display','Montserrat',serif;font-size:clamp(32px,5vw,56px);font-weight:700;line-height:1.15;letter-spacing:-.01em;margin-bottom:18px;color:var(--ink);max-width:900px}
-.hero h1 em{font-style:italic;font-weight:600;color:var(--wood)}
-.hero-pains{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:14px 20px;margin:24px 0 32px}
-.pain{display:flex;gap:9px;align-items:center;color:var(--ink-soft);font-size:14px;min-width:0}
+.hero h1{font-family:'Playfair Display','Montserrat',serif;font-size:clamp(34px,4.6vw,60px);font-weight:600;line-height:1.08;letter-spacing:-.022em;margin-bottom:22px;color:var(--ink);max-width:800px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--wood)}
+.hero-pains{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:18px 30px;margin:30px 0 40px}
+.pain{display:flex;gap:9px;align-items:center;color:var(--ink-soft);font-size:14.5px;min-width:0}
 .pain:nth-child(3){grid-column:1/-1;justify-content:center}
 .pain span{font-weight:700}
 .pain:nth-child(3) span{display:flex;flex-direction:column;align-items:center;gap:2px}
 .pain:nth-child(3) small{font-size:12px;font-weight:400;color:var(--muted)}
-.pain svg{flex:none;width:22px;height:22px;stroke:var(--wood);fill:none;stroke-width:2.2}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.hero-note{color:var(--muted);font-size:13px;margin-top:15px}
-.hero-visual{position:relative;width:calc(100% + 110px);margin-left:-110px;z-index:1}
-.hero-visual::before{content:"";position:absolute;z-index:1;inset:0 auto 0 -1px;width:300px;background:linear-gradient(90deg,var(--bg) 0%,rgba(250,248,243,.82) 30%,rgba(250,248,243,.3) 68%,transparent 100%);pointer-events:none}
-.photo-wrap{border-radius:26px;box-shadow:var(--shadow-hi);border:6px solid #fff;aspect-ratio:4/3.2;object-fit:cover;width:100%;background:linear-gradient(160deg,#f8f9f9 0%,#e9ecea 45%,#cfc6b8 100%);position:relative;overflow:hidden}
+.pain svg{flex:none;width:20px;height:20px;stroke:var(--wood);fill:none;stroke-width:2}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.hero-note{color:var(--muted);font-size:13px;margin-top:20px}
+.hero-visual{position:relative;width:calc(100% + 72px);margin-left:-72px;z-index:1}
+.hero-visual::before{content:"";position:absolute;z-index:1;inset:0 auto 0 -1px;width:340px;background:linear-gradient(90deg,var(--bg) 0%,rgba(251,252,252,.72) 34%,rgba(251,252,252,.22) 66%,transparent 100%);pointer-events:none}
+.photo-wrap{border-radius:34px;box-shadow:0 40px 90px -34px rgba(38,40,42,.42),0 2px 10px rgba(38,40,42,.05);border:1px solid rgba(255,255,255,.85);aspect-ratio:4/3.2;object-fit:cover;width:100%;background:linear-gradient(160deg,#f8f9f9 0%,#e9ecea 45%,#cfc6b8 100%);position:relative;overflow:hidden}
 .photo-wrap .photo{width:100%;height:100%;object-fit:cover;border-radius:0;border:0;box-shadow:none;aspect-ratio:auto;display:block}
 .photo-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 34%,rgba(255,255,255,.4) 50%,transparent 64%);transform:translateX(-70%);animation:photoSheen 6s ease-in-out infinite;pointer-events:none}
 @keyframes photoSheen{0%,55%{transform:translateX(-80%)}90%,100%{transform:translateX(80%)}}
@@ -133,7 +134,7 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .rating-chip .rv{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#f0e9dd,#b9a98a);display:flex;align-items:center;justify-content:center;font-weight:800;color:#2c2414;font-size:13px}
 .rating-chip b{font-size:14px;display:block}
 .rating-chip small{color:var(--muted);font-size:11.5px}
-.badge-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.badge-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}
 .badge{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 15px;font-size:13.5px;color:var(--ink-soft);box-shadow:var(--shadow);transition:all .3s}
 .badge:hover{transform:translateY(-3px);border-color:var(--wood)}
 .badge b{color:var(--ink)}
@@ -161,7 +162,7 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .dir-circle.active span{color:var(--ink);font-weight:700}
 #prices{background:var(--bg2)}
 #prices::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;z-index:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='200'%3E%3Cg fill='none' stroke='%23c8a97e' stroke-width='1.1' opacity='.4'%3E%3Cpath d='M40 30c-7-6-18-5-23 2-6 8-5 19 1 28 3 5 6 10 7 16 .8 4 3 7 6.5 7 4 0 6-3.5 6-7.6V59h4.6v16.4c0 4.1 2 7.6 6 7.6 3.5 0 5.7-3 6.5-7 1-6 4-11 7-16 6.6-9.4 7.4-20.4 1.5-28-5-7-16-8-23-2z'/%3E%3C/g%3E%3C/svg%3E")}
-#prices::after{content:"";position:absolute;top:0;right:0;bottom:0;width:55%;pointer-events:none;z-index:1;background-image:linear-gradient(to right,var(--bg2) 0%,rgba(242,244,244,.85) 30%,rgba(242,244,244,0) 70%),url("dental-tools.jpg");background-repeat:no-repeat,no-repeat;background-position:left center,right center;background-size:100% 100%,auto 100%}
+#prices::after{content:"";position:absolute;top:0;right:0;bottom:0;width:46%;pointer-events:none;z-index:1;background-image:linear-gradient(to right,var(--bg2) 0%,rgba(242,244,244,.78) 38%,rgba(242,244,244,0) 80%),url("dental-tools.jpg");background-repeat:no-repeat,no-repeat;background-position:left center,right center;background-size:100% 100%,auto 100%}
 #prices .wrap{position:relative;z-index:2}
 .acc-list{max-width:900px;margin:0 auto;position:relative}
 .acc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden;transition:all .35s}
@@ -175,13 +176,17 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .acc.open .acc-head .pm::before{content:"−"}
 .acc-head .pm::before{content:"+"}
 .acc.open{border-color:var(--ink);box-shadow:0 24px 60px rgba(44,44,44,.16)}
-.acc-body{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.8,.2,1)}
-.acc.open .acc-body{max-height:1400px}
+.acc-body{display:grid;grid-template-rows:0fr;max-height:0;overflow:hidden;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1),max-height 0s linear .45s}
+.acc.open .acc-body{grid-template-rows:1fr;max-height:none;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1),max-height 0s}
+.acc-body>.acc-inner{min-height:0;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s}
+.acc.open .acc-body>.acc-inner{opacity:1;visibility:visible;transition:opacity .35s ease .08s,visibility 0s}
 .acc-inner{padding:0 22px 22px;border-top:1px solid var(--line);margin-top:0}
-.acc-inner .labels{display:flex;gap:26px;padding:14px 0 6px;color:var(--muted);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+.acc-inner .labels{display:flex;justify-content:space-between;gap:26px;padding:14px 0 6px;color:var(--muted);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
 .acc-inner .desc{color:var(--ink-soft);font-size:14.5px;margin-bottom:18px;max-width:680px}
 .price-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
 .price-row:last-of-type{border-bottom:none}
+.price-row .nm{flex:1 1 auto;min-width:0}
+.price-row .pv-wrap{display:flex;align-items:center;gap:12px;flex:none}
 .price-row .pr{font-weight:700;color:var(--ink);white-space:nowrap}
 .price-row .go{padding:7px 14px;font-size:12.5px;border-radius:10px;background:var(--bg2);border:1px solid var(--line);color:var(--ink-soft);cursor:pointer;font-family:inherit;transition:all .3s;font-weight:600}
 .price-row .go:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -195,16 +200,20 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .clinic-swiper .swiper-button-next:hover,.clinic-swiper .swiper-button-prev:hover{background:var(--ink);color:#fff}
 .clinic-swiper .swiper-button-next:after,.clinic-swiper .swiper-button-prev:after{font-size:16px;font-weight:800}
 .clinic-swiper .swiper-pagination-bullet-active{background:var(--wood)!important}
-.modal-img-overlay{position:fixed;inset:0;background:rgba(38,40,42,.92);backdrop-filter:blur(10px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;cursor:zoom-out;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,visibility .3s ease}
-.modal-img-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
-.modal-img-box{max-width:90%;max-height:85vh;position:relative;animation:modalScale .35s cubic-bezier(.15,.85,.3,1) both}
-@keyframes modalScale{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
-.modal-img-box img{border-radius:12px;border:4px solid #fff;box-shadow:0 20px 60px rgba(0,0,0,.4);max-height:80vh;object-fit:cover;width:100%}
-.modal-img-close{position:absolute;top:-44px;right:-10px;background:none;border:none;color:#fff;font-size:32px;cursor:pointer}
-.modal-img-nav{position:absolute;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:38px;font-weight:300;line-height:1;cursor:pointer;transition:all .3s;z-index:1001;display:flex;align-items:center;justify-content:center;padding-bottom:6px;font-family:inherit}
-.modal-img-nav:hover{background:rgba(255,255,255,.32);transform:translateY(-50%) scale(1.08)}
-.modal-img-nav.prev{left:24px}.modal-img-nav.next{right:24px}
-@media(max-width:620px){.modal-img-nav{width:44px;height:44px;font-size:30px}.modal-img-nav.prev{left:8px}.modal-img-nav.next{right:8px}}
+/* ============================================================
+   Анимации появления и микровзаимодействия
+   ============================================================ */
+.reveal{opacity:0}
+.reveal.in{animation:revealUp .7s cubic-bezier(.2,.8,.2,1) var(--rd,0ms) both}
+@keyframes revealUp{from{opacity:0;translate:0 22px}to{opacity:1;translate:none}}
+.dirs-hint .arr{animation:arrNudge 2.4s ease-in-out infinite}
+@keyframes arrNudge{0%,100%{transform:none}50%{transform:translateX(6px)}}
+.photo-wrap{will-change:transform;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  #splash{display:none}
+  .reveal{opacity:1}
+}
 .maplead{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:stretch}
 .map-box{border-radius:24px;border:1px solid var(--line);overflow:hidden;position:relative;min-height:440px;background:linear-gradient(160deg,#fff,#f0eadd);box-shadow:var(--shadow-hi)}
 .map-embed{display:block;width:100%;height:100%;padding:0;border:0;position:absolute;inset:0}
@@ -243,14 +252,13 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .doc .ph{aspect-ratio:1/1.06;background:linear-gradient(160deg,#f2f4f4,#e3e6e5);position:relative;overflow:hidden}
 .doc .ph img{display:block;width:100%;height:100%;object-fit:cover}
 .doc .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(250,248,243,.95))}
-.doc .ph .init{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:50px;font-weight:800;color:rgba(44,44,44,.16);letter-spacing:.04em}
 .doc .exp{position:absolute;top:14px;left:14px;background:#fff;border:1px solid var(--line);color:var(--ink);font-size:12px;font-weight:700;border-radius:999px;padding:5px 12px;z-index:2;box-shadow:var(--shadow)}
 .doc .info{padding:20px;position:relative;margin-top:-34px;display:flex;flex-direction:column;flex:1}
 .doc .info b{font-size:16.5px;display:block;margin-bottom:4px;font-weight:800}
 .doc .info .spec{color:var(--wood);font-size:12.5px;font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em}
 .doc .info p{color:var(--muted);font-size:13px;margin-bottom:16px;min-height:62px}
 .doc .btn{width:100%;padding:11px;font-size:13px;margin-top:auto}
-#contacts::after{content:"";position:absolute;top:0;right:0;bottom:0;width:55%;pointer-events:none;z-index:0;background-image:linear-gradient(to right,var(--bg) 0%,rgba(251,252,252,.85) 30%,rgba(251,252,252,0) 70%),url("innovation.jpg");background-repeat:no-repeat,no-repeat;background-position:left center,right center;background-size:100% 100%,auto 100%}
+#contacts::after{content:"";position:absolute;top:0;right:0;bottom:0;width:46%;pointer-events:none;z-index:0;background-image:linear-gradient(to right,var(--bg) 0%,rgba(251,252,252,.8) 38%,rgba(251,252,252,0) 80%),url("innovation.jpg");background-repeat:no-repeat,no-repeat;background-position:left center,right center;background-size:100% 100%,auto 100%}
 #contacts .wrap{position:relative;z-index:2}
 #reviews{background:var(--bg2)}
 .trust-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:46px}
@@ -292,7 +300,7 @@ footer a:hover{color:var(--wood)}
 .fab-price:hover{border-color:var(--wood)}
 .fab-cta{background:var(--ink);color:#fff}
 .fab-cta:hover{background:var(--wood)}
-.fab svg{width:17px;height:17px;fill:currentColor}
+.fab svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .modal{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(44,44,44,.5);backdrop-filter:blur(6px)}
 .modal.open{display:flex}
 .modal-box{background:#fff;border-radius:24px;max-width:520px;width:100%;padding:34px;position:relative;box-shadow:var(--shadow-hi);animation:modalIn .4s cubic-bezier(.2,.8,.2,1) both;max-height:92vh;overflow:auto}
@@ -302,12 +310,13 @@ footer a:hover{color:var(--wood)}
 .mclose{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:10px;background:var(--bg2);border:1px solid var(--line);color:var(--ink);font-size:16px;cursor:pointer;transition:all .3s}
 .mclose:hover{background:var(--ink);color:#fff;transform:scale(1.05)}
 .modal-box .field input,.modal-box .field select{background:#fff}
+.modal-box .doc-avatar-round{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center 28%;border:2px solid #fff;margin:8px auto 18px;box-shadow:var(--shadow)}
 .msuccess{display:none;text-align:center;padding:26px 0}
 .msuccess.show{display:block}
 .msuccess .ok{width:72px;height:72px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,#f0e9dd,#b9a98a);display:flex;align-items:center;justify-content:center}
 .msuccess .ok svg{width:34px;height:34px;stroke:#2c2414;stroke-width:3;fill:none}
 .docscan{width:100%;border-radius:14px;border:1px solid var(--line)}
-#cookieBar{position:fixed;left:0;right:0;bottom:0;z-index:400;background:rgba(250,248,243,.97);backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:16px 0;box-shadow:0 -10px 40px rgba(44,44,44,.08);transform:translateY(110%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+#cookieBar{position:fixed;left:0;right:0;bottom:0;z-index:250;background:rgba(250,248,243,.97);backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:16px 0;box-shadow:0 -10px 40px rgba(44,44,44,.08);transform:translateY(110%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 #cookieBar.show{transform:none}
 .cb-row{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .cb-row p{color:var(--muted);font-size:13px;max-width:760px}
@@ -319,7 +328,7 @@ footer a:hover{color:var(--wood)}
 .privacy-back-btn{background:transparent;border:1px solid var(--ink);color:var(--ink);padding:10px 24px;border-radius:12px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;cursor:pointer;transition:all .3s ease}
 .privacy-back-btn:hover{background:var(--ink);color:#fff}
 .privacy-section{margin-bottom:45px}
-.privacy-section h2{font-size:1.6rem;margin-bottom:18px;color:var(--ink);border-left:4px solid var(--wood);padding-left:15px;font-family:'Inter',sans-serif;font-weight:700}
+.privacy-section h2{font-size:1.6rem;margin-bottom:18px;color:var(--ink);border-left:4px solid var(--wood);padding-left:15px;font-family:'Montserrat',sans-serif;font-weight:700}
 .privacy-section p,.privacy-section li{font-size:1.05rem;line-height:1.7;color:var(--ink-soft);margin-bottom:12px}
 .privacy-section ul{padding-left:22px}
 .privacy-section ul li{margin-bottom:10px}
@@ -327,10 +336,26 @@ footer a:hover{color:var(--wood)}
 .privacy-footer-note{margin-top:60px;padding-top:25px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted);text-align:center}
 .privacy-link{color:var(--wood);font-weight:600;text-decoration:none}
 .privacy-link:hover{text-decoration:underline}
+/* ============================================================
+   Акценты Playfair Display — только крупный кегль и цифры
+   ============================================================ */
+.lead-form h3,.modal-box h3,.doc .info b,.fgrid b{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.01em}
+.trust-item .num{font-family:'Playfair Display',serif;font-weight:700;font-size:34px;letter-spacing:-.015em}
+.trust-item .num small{font-family:'Montserrat',sans-serif;font-size:15px}
+.rating-chip .rv{font-family:'Playfair Display',serif;font-weight:700}
+.price-row .pr{font-family:'Playfair Display',serif;font-weight:600;font-size:15.5px}
+.kicker{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;text-transform:none;letter-spacing:.04em;font-size:14.5px}
 @media(max-width:768px){.privacy-header{flex-direction:column;gap:20px;align-items:flex-start}.privacy-title{font-size:2rem}}
 /* ============================================================
    МОБИЛЬНАЯ АДАПТАЦИЯ (планшеты и телефоны)
    ============================================================ */
+
+/* --- Десктоп: галочки в hero в один ряд --- */
+@media (min-width: 993px) {
+  .hero-pains { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
+  .pain:nth-child(3) { grid-column: auto; justify-content: flex-start; }
+  .pain:nth-child(3) span { align-items: flex-start; }
+}
 
 /* --- Планшеты (до 992px) --- */
 @media (max-width: 992px) {
@@ -349,7 +374,7 @@ footer a:hover{color:var(--wood)}
   .burger { display: block; }
 
   /* Hero: одна колонка */
-  .hero { padding: 90px 0 30px; }
+  .hero { padding: 108px 0 40px; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(28px, 7vw, 38px); }
   .hero-pains { grid-template-columns: 1fr; text-align: left; }
@@ -373,10 +398,10 @@ footer a:hover{color:var(--wood)}
   .doc .ph::after { background: linear-gradient(180deg,transparent 65%,rgba(250,248,243,.98)); }
   .doc .info p { min-height: auto; }
 
-  /* Аккордеон цен: цена и кнопка в столбик, чтобы не обрезались */
-  .price-row { flex-wrap: wrap; }
-  .price-row .pr { width: 100%; }
-  .price-row .go { width: 100%; margin-top: 6px; }
+  /* Аккордеон цен: название сверху, цена и кнопка в одну строку */
+  .price-row { flex-wrap: wrap; gap: 8px 12px; }
+  .price-row .nm { flex: 1 1 100%; }
+  .price-row .pv-wrap { flex: 1 1 100%; justify-content: space-between; }
 
   /* Скрываем руку-подсказку, чтобы не мешала на маленьком экране */
   .glove { display: none; }
@@ -384,6 +409,7 @@ footer a:hover{color:var(--wood)}
   /* Плавающие кнопки */
   #fabBar { right: 12px; bottom: 12px; }
   .fab { padding: 10px 14px; font-size: 12px; }
+  #docWidget { display: none; }
 }
 </style>
 </head>
@@ -411,7 +437,6 @@ footer a:hover{color:var(--wood)}
     <div class="h-actions">
       <div class="h-messengers">
         <a class="mess" href="https://t.me/dentavv" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24"><path d="M9.8 15.2 9.7 19c.4 0 .6-.2.8-.4l2-1.9 4.1 3c.8.4 1.3.2 1.5-.7l2.8-13c.3-1.1-.4-1.6-1.1-1.3L2.9 10.1c-1.1.4-1.1 1-.2 1.3l4 1.2 9.2-5.8c.4-.3.8-.1.5.2z"/></svg></a>
-        <a class="mess" href="https://wa.me/79309115500" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1.1.2-3.4-.7-2.8-1.2-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.7 1.8.8 1.9c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.2.5.2.6.3.1.2.1.8-.1 1.5z"/></svg></a>
       </div>
       <a class="h-phone" href="tel:+79309115500">+7 (930) 911-55-00</a>
       <button class="btn btn-dark" onclick="openModal('callback')">Заказать звонок</button>
@@ -422,7 +447,6 @@ footer a:hover{color:var(--wood)}
 <nav id="mobileMenu">
   <a class="mnav" href="tel:+79309115500">📞 +7 (930) 911-55-00</a>
   <a class="mnav" href="https://t.me/dentavv" target="_blank" rel="noopener">Telegram - @dentavv</a>
-  <a class="mnav" href="https://wa.me/79309115500" target="_blank" rel="noopener">WhatsApp</a>
   <a class="mnav" href="#prices" onclick="mmClose()">Услуги и цены</a>
   <a class="mnav" href="#team" onclick="mmClose()">Врачи</a>
   <a class="mnav" href="#contacts" onclick="mmClose()">Контакты</a>
@@ -439,8 +463,8 @@ footer a:hover{color:var(--wood)}
         <div class="pain"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Фиксированные цены<small>Стоимость закрепляем до начала лечения</small></span></div>
       </div>
       <div class="hero-cta">
-        <button class="btn btn-champ" onclick="openModal('lead')" data-goal="ORDER">Записаться на бесплатный осмотр</button>
-        <button class="btn btn-line" onclick="scrollTo_('prices')" data-goal="PRICE">Смотреть цены</button>
+        <button class="btn btn-champ" onclick="openLeadCheckup()">Записаться на бесплатный осмотр</button>
+        <button class="btn btn-line" onclick="scrollTo_('prices')">Смотреть цены</button>
       </div>
       <p class="hero-note">⏱ Приём по записи - без очередей. 300 м от метро Варшавская.</p>
       <div class="badge-row">
@@ -508,19 +532,19 @@ footer a:hover{color:var(--wood)}
     <div class="team">
       <div class="doc">
         <div class="ph"><img src="doctor.jpg" alt="Владимир Вербицкий" /><div class="exp">опыт 14 лет</div></div>
-        <div class="info"><b>Владимир Вербицкий</b><div class="spec">Главный врач · терапевт, имплантолог</div><p>Врач высшей категории. Микроскоп, сложные реставрации, имплантация. Личный приём в Telegram - отвечаю сам.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Владимиру Вербицкому',true)">Записаться к врачу</button></div>
+        <div class="info"><b>Владимир Вербицкий</b><div class="spec">Главный врач · терапевт, имплантолог</div><p>Врач высшей категории. Микроскоп, сложные реставрации, имплантация. Личный приём в Telegram - отвечаю сам.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Владимиру Вербицкому','Запись к врачу')">Записаться к врачу</button></div>
       </div>
       <div class="doc">
         <div class="ph"><img src="gromov.jpg" alt="Дмитрий Громов" /><div class="exp">опыт 12 лет</div></div>
-        <div class="info"><b>Дмитрий Громов</b><div class="spec">Хирург-имплантолог</div><p>Кандидат медицинских наук. Сложное удаление, костная пластика, более 2000 установленных имплантов.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Дмитрию Громову',true)">Записаться к врачу</button></div>
+        <div class="info"><b>Дмитрий Громов</b><div class="spec">Хирург-имплантолог</div><p>Кандидат медицинских наук. Сложное удаление, костная пластика, более 2000 установленных имплантов.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Дмитрию Громову','Запись к врачу')">Записаться к врачу</button></div>
       </div>
       <div class="doc">
         <div class="ph"><img src="sokolova.jpg" alt="Анна Соколова" /><div class="exp">опыт 11 лет</div></div>
-        <div class="info"><b>Анна Соколова</b><div class="spec">Ортодонт</div><p>Брекет-системы и элайнеры для взрослых и детей. Цифровое планирование прикуса, честные прогнозы лечения.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Анне Соколовой',true)">Записаться к врачу</button></div>
+        <div class="info"><b>Анна Соколова</b><div class="spec">Ортодонт</div><p>Брекет-системы и элайнеры для взрослых и детей. Цифровое планирование прикуса, честные прогнозы лечения.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Анне Соколовой','Запись к врачу')">Записаться к врачу</button></div>
       </div>
       <div class="doc">
         <div class="ph"><img src="lebedeva.jpg" alt="Мария Лебедева" /><div class="exp">опыт 10 лет</div></div>
-        <div class="info"><b>Мария Лебедева</b><div class="spec">Детский стоматолог</div><p>Лечение без страха и слёз: адаптационные приёмы, работа с детьми. Дети идут к ней сами.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Марии Лебедевой',true)">Записаться к врачу</button></div>
+        <div class="info"><b>Мария Лебедева</b><div class="spec">Детский стоматолог</div><p>Лечение без страха и слёз: адаптационные приёмы, работа с детьми. Дети идут к ней сами.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Марии Лебедевой','Запись к врачу')">Записаться к врачу</button></div>
       </div>
     </div>
   </div>
@@ -533,7 +557,7 @@ footer a:hover{color:var(--wood)}
     <div class="lic-grid">
       <div class="lic" onclick="window.open('license.pdf','_blank')" title="Откроется PDF в новой вкладке"><iframe class="lic-preview" src="license.pdf#page=1&amp;toolbar=0&amp;navpanes=0" title="Превью медицинской лицензии" loading="lazy"></iframe><b>Медицинская лицензия</b><small>№ Л041-01137-77/07118634 · выписка из реестра (PDF)</small></div>
       <div class="lic" onclick="window.open('license-notice.pdf','_blank')" title="Откроется PDF в новой вкладке"><iframe class="lic-preview" src="license-notice.pdf#page=1&amp;toolbar=0&amp;navpanes=0" title="Превью уведомления о лицензии" loading="lazy"></iframe><b>Уведомление о лицензии</b><small>Приказ ДЗМ № 1319-Л от 28.09.2026 (PDF)</small></div>
-      <div class="lic" onclick="openScan('Санитарно-эпидемиологическое заключение','СЭЗ № XXXXXXXXXXX · Роспотребнадзор')"><div class="doc-icon">🛡</div><b>Санэпидзаключение</b><small>Соответствие СанПиН · нажмите для просмотра</small></div>
+      <div class="lic" onclick="openScan('Санэпидзаключение','Роспотребнадзор · скан предоставляем по запросу')"><div class="doc-icon">🛡</div><b>Санэпидзаключение</b><small>Соответствие СанПиН · нажмите для просмотра</small></div>
     </div>
     <p class="legal-note"><b>Лицензируемые виды работ:</b> стоматология терапевтическая, хирургическая, ортопедическая, детская, общей практики; ортодонтия; сестринское дело. ОГРН 1267700251708 · ИНН 9726116604. Имеются противопоказания - необходима консультация специалиста.</p>
   </div>
@@ -554,8 +578,8 @@ footer a:hover{color:var(--wood)}
         <div class="field"><label for="fName">Ваше имя</label><input id="fName" type="text" placeholder="Как к вам обращаться?" required /></div>
         <div class="field"><label for="fPhone">Телефон</label><input id="fPhone" type="tel" placeholder="+7 (___) ___-__-__" required pattern="[0-9+()\s\-]{10,20}" /></div>
         <div class="field"><label for="fService">Интересующая услуга</label><select id="fService"></select></div>
-        <label class="consent"><input type="checkbox" required /><span>Соглашаюсь с <a href="#" class="privacy-link" onclick="showPrivacyPage()">политикой конфиденциальности</a> и на обработку персональных данных</span></label>
-        <button class="btn btn-dark" type="submit" style="width:100%" data-goal="ORDER">Записаться на приём</button>
+        <label class="consent"><input type="checkbox" required /><span>Соглашаюсь с <a href="#" class="privacy-link" onclick="showPrivacyPage();return false;">политикой конфиденциальности</a> и на обработку персональных данных</span></label>
+        <button class="btn btn-dark" type="submit" style="width:100%">Записаться на приём</button>
       </form>
     </div>
   </div>
@@ -589,6 +613,20 @@ footer a:hover{color:var(--wood)}
     <div style="margin-top:20px;padding-top:15px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);max-width:820px;line-height:1.5;"><strong style="color:var(--ink-soft)">Оператор персональных данных:</strong> Общество с ограниченной ответственностью «Дента В» (ООО «Дента В»), ИНН 9726116604, ОГРН 1267700251708. Адрес: 117556, г. Москва, ул. Болотниковская, д. 1, корп. 2, помещ. 2/1. Контактный телефон: +7 (930) 911-55-00. Электронная почта: info@dentav.ru. <a href="#" class="privacy-link" onclick="showPrivacyPage();return false;" style="margin-left:5px;">Политика обработки персональных данных</a>.</div>
   </div>
 </footer>
+<div id="docWidget">
+  <img class="doc-avatar" src="doctor.jpg" alt="Владимир Вербицкий" />
+  <button class="dw-btn" onclick="openModal('chat')"><b>Владимир Вербицкий<br>основатель клиники</b><small>Написать лично мне</small></button>
+</div>
+<div id="fabBar">
+  <button class="fab fab-price" onclick="scrollTo_('prices')">
+    <svg viewBox="0 0 24 24"><path d="M9 20V4.5h4.6a4.2 4.2 0 0 1 0 8.4H9M7 12.9h6.4"/></svg>
+    Узнать цены
+  </button>
+  <button class="fab fab-cta" onclick="openModal('lead')">
+    <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M9 15.2l2 2 4-4"/></svg>
+    Записаться на приём
+  </button>
+</div>
 </div>
 <div id="privacy-page">
   <div class="privacy-container">
@@ -609,9 +647,9 @@ footer a:hover{color:var(--wood)}
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script>
 // ============================================================
-// НАСТРОЙКИ — ЗАПОЛНИТЕ СВОИ
+// Настройки отправки заявок
 // ============================================================
-const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_KEY'; // ← получите на web3forms.com
+const WEB3FORMS_KEY = ''; // access key, полученный на web3forms.com
 
 // ============================================================
 // Автозакрытие интро
@@ -622,6 +660,7 @@ setTimeout(skipSplash, 3400);
 // Переключение страниц
 // ============================================================
 function showPrivacyPage() {
+  closeModal();
   document.getElementById('main-content').style.display = 'none';
   document.getElementById('privacy-page').style.display = 'block';
   window.scrollTo({top:0, behavior:'smooth'});
@@ -634,30 +673,48 @@ function showMainPage() {
 // ============================================================
 // Модалки
 // ============================================================
-function openModal(type) {
+function esc(v) {
+  return String(v == null ? '' : v).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+const CONSENT_HTML = '<label class="consent"><input type="checkbox" required /><span>Соглашаюсь с <a href="#" class="privacy-link" onclick="showPrivacyPage();return false;">политикой конфиденциальности</a> и на обработку персональных данных</span></label>';
+
+function openModal(type, opts) {
+  opts = opts || {};
   const m = document.createElement('div');
   m.className = 'modal open';
   if (type === 'callback') {
-    m.innerHTML = `<div class="modal-box"><button class="mclose" onclick="this.closest('.modal').classList.remove('open')">✕</button><h3>Заказать звонок</h3><p class="ms">Оставьте номер — мы перезвоним</p><div class="field"><label>Имя</label><input id="cName" placeholder="Ваше имя" /></div><div class="field"><label>Телефон</label><input id="cPhone" placeholder="+7 (___) ___-__-__" required pattern="[0-9+()\\s\\-]{10,20}" /></div><button class="btn btn-dark" style="width:100%" onclick="sendCallback()">Перезвоните мне</button></div>`;
-  } else if (type === 'lead') {
-    m.innerHTML = `<div class="modal-box"><button class="mclose" onclick="this.closest('.modal').classList.remove('open')">✕</button><h3>Запись на приём</h3><p class="ms">Оставьте контакты — администратор подтвердит</p><div class="field"><label>Имя</label><input id="lName" placeholder="Как к вам обращаться?" required /></div><div class="field"><label>Телефон</label><input id="lPhone" placeholder="+7 (___) ___-__-__" required pattern="[0-9+()\\s\\-]{10,20}" /></div><button class="btn btn-dark" style="width:100%" onclick="sendLeadModal()">Записаться</button></div>`;
+    m.innerHTML = `<div class="modal-box"><button class="mclose" onclick="closeModal()" aria-label="Закрыть">✕</button><h3>Заказать звонок</h3><p class="ms">Оставьте номер — перезвоним в течение 15 минут.</p><form onsubmit="sendCallback(this);return false;"><div class="field"><label for="cName">Имя</label><input id="cName" type="text" placeholder="Ваше имя" required /></div><div class="field"><label for="cPhone">Телефон</label><input id="cPhone" type="tel" placeholder="+7 (___) ___-__-__" required pattern="[0-9+()\\s\\-]{10,20}" /></div>${CONSENT_HTML}<button class="btn btn-dark" type="submit" style="width:100%">Перезвоните мне</button></form></div>`;
+  } else if (type === 'scan') {
+    m.innerHTML = `<div class="modal-box"><button class="mclose" onclick="closeModal()" aria-label="Закрыть">✕</button><h3>${esc(opts.title || 'Документ')}</h3><p class="ms">${esc(opts.sub || '')}</p><p class="howto">Скан покажем в клинике или отправим по запросу — позвоните: <a class="privacy-link" href="tel:+79309115500">+7 (930) 911-55-00</a>.</p><button class="btn btn-dark" style="width:100%" onclick="closeModal()">Понятно</button></div>`;
+  } else if (type === 'chat') {
+    m.innerHTML = `<div class="modal-box" style="text-align:center"><button class="mclose" onclick="closeModal()" aria-label="Закрыть">✕</button><img class="doc-avatar-round" src="doctor.jpg" alt="Владимир Вербицкий" /><h3>Владимир Вербицкий</h3><p class="ms">Ведущий врач клиники. Отвечаю лично — без ботов и администраторов.</p><a class="btn btn-dark" style="width:100%" href="https://t.me/verbeets" target="_blank" rel="noopener" onclick="closeModal()">✈️ Написать в Telegram — @verbeets</a></div>`;
+  } else {
+    m.innerHTML = `<div class="modal-box"><button class="mclose" onclick="closeModal()" aria-label="Закрыть">✕</button><h3>${esc(opts.title || 'Запись на приём')}</h3><p class="ms">${opts.topic ? 'Заявка: ' + esc(opts.topic) : 'Оставьте контакты — администратор подтвердит запись.'}</p><input type="hidden" id="lTopic" value="${esc(opts.topic || '')}" /><form onsubmit="sendLeadModal(this);return false;"><div class="field"><label for="lName">Имя</label><input id="lName" type="text" placeholder="Как к вам обращаться?" required /></div><div class="field"><label for="lPhone">Телефон</label><input id="lPhone" type="tel" placeholder="+7 (___) ___-__-__" required pattern="[0-9+()\\s\\-]{10,20}" /></div>${CONSENT_HTML}<button class="btn btn-dark" type="submit" style="width:100%">Отправить заявку</button></form></div>`;
   }
   document.body.appendChild(m);
+  document.body.style.overflow = 'hidden';
 }
 function closeModal() {
   document.querySelectorAll('.modal.open').forEach(m => m.classList.remove('open'));
+  document.body.style.overflow = '';
   setTimeout(() => document.querySelectorAll('.modal').forEach(m => m.remove()), 400);
 }
 document.addEventListener('click', e => { if (e.target.classList.contains('modal')) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 // ============================================================
 // Отправка в Web3forms (только email)
 // ============================================================
+function submissionReady() {
+  if (WEB3FORMS_KEY) return true;
+  console.warn('Web3forms access key не задан — заявка не отправлена');
+  alert('Заявка сейчас не отправляется. Позвоните нам: +7 (930) 911-55-00 — запишем вручную.');
+  return false;
+}
+
 async function sendToWeb3forms(data) {
-  if (!WEB3FORMS_KEY || WEB3FORMS_KEY === 'YOUR_WEB3FORMS_KEY') {
-    console.warn('Web3forms KEY не задан — заявка не уйдёт');
-    return null;
-  }
+  if (!WEB3FORMS_KEY) return null;
   try {
     const r = await fetch('https://api.web3forms.com/v3.1/submit', {
       method: 'POST',
@@ -680,103 +737,117 @@ async function submitLead(e) {
   const phone = document.getElementById('fPhone').value.trim();
   const service = document.getElementById('fService').value;
   if (!name || !phone) { alert('Заполните имя и телефон'); return false; }
+  if (!submissionReady()) return false;
 
-  const btn = e.target.querySelector('button[type="submit"]');
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
   btn.disabled = true; btn.textContent = 'Отправка…';
 
   try {
     const data = { name, phone, service, source: 'contacts-form', date: new Date().toISOString() };
-    await sendToWeb3forms(data);
-    e.target.reset();
+    const res = await sendToWeb3forms(data);
+    if (!res || res.success === false) throw new Error('Отправка не удалась');
+    form.reset();
     alert('Заявка принята! Мы перезвоним вам.');
   } catch (err) {
-    btn.disabled = false; btn.textContent = 'Записаться на приём';
     alert('Ошибка отправки. Позвоните нам: +7 (930) 911-55-00');
     console.error(err);
+  } finally {
+    btn.disabled = false; btn.textContent = 'Записаться на приём';
   }
   return false;
 }
 
 // Модалка callback
-async function sendCallback() {
-  const name = document.getElementById('cName')?.value.trim();
-  const phone = document.getElementById('cPhone')?.value.trim();
-  if (!name || !phone) { alert('Заполните имя и телефон'); return; }
-  const btn = event.target;
+async function sendCallback(form) {
+  if (!submissionReady()) return;
+  const name = form.querySelector('#cName').value.trim();
+  const phone = form.querySelector('#cPhone').value.trim();
+  const btn = form.querySelector('button[type="submit"]');
   btn.disabled = true; btn.textContent = 'Отправка…';
   try {
-    await sendToWeb3forms({ name, phone, source: 'callback-modal', date: new Date().toISOString() });
+    const res = await sendToWeb3forms({ name, phone, source: 'callback-modal', date: new Date().toISOString() });
+    if (!res || res.success === false) throw new Error('Отправка не удалась');
     closeModal();
     alert('Спасибо, ' + name + '! Мы перезвоним.');
   } catch (e) {
-    btn.disabled = false; btn.textContent = 'Перезвоните мне';
     alert('Не удалось отправить. Позвоните: +7 (930) 911-55-00');
+    console.error(e);
+    btn.disabled = false; btn.textContent = 'Перезвоните мне';
   }
 }
 
 // Модалка lead
-async function sendLeadModal() {
-  const name = document.getElementById('lName')?.value.trim();
-  const phone = document.getElementById('lPhone')?.value.trim();
-  if (!name || !phone) { alert('Заполните имя и телефон'); return; }
-  const btn = event.target;
+async function sendLeadModal(form) {
+  if (!submissionReady()) return;
+  const name = form.querySelector('#lName').value.trim();
+  const phone = form.querySelector('#lPhone').value.trim();
+  const topic = document.getElementById('lTopic')?.value || '';
+  const btn = form.querySelector('button[type="submit"]');
   btn.disabled = true; btn.textContent = 'Отправка…';
   try {
-    await sendToWeb3forms({ name, phone, source: 'lead-modal', date: new Date().toISOString() });
+    const res = await sendToWeb3forms({ name, phone, topic, source: 'lead-modal', date: new Date().toISOString() });
+    if (!res || res.success === false) throw new Error('Отправка не удалась');
     closeModal();
     alert('Заявка принята! Мы свяжемся с вами.');
   } catch (e) {
-    btn.disabled = false; btn.textContent = 'Записаться';
     alert('Не удалось отправить. Позвоните: +7 (930) 911-55-00');
+    console.error(e);
+    btn.disabled = false; btn.textContent = 'Отправить заявку';
   }
 }
 
 // ============================================================
 // Quick order
 // ============================================================
-function quickOrder(text) {
-  openModal('lead');
-  setTimeout(() => {
-    const n = document.getElementById('lName');
-    if (n) n.value = text.replace('Приём к ', '');
-  }, 100);
+function quickOrder(topic, title) {
+  openModal('lead', { topic: topic, title: title || 'Запись на приём' });
+}
+
+function openLeadCheckup() {
+  openModal('lead', { title: 'Записаться на бесплатный осмотр', topic: 'Бесплатный осмотр' });
+}
+
+function openScan(title, sub) {
+  openModal('scan', { title: title, sub: sub });
 }
 
 // ============================================================
 // Аккордеон цен
 // ============================================================
 const services = [
-  { title: 'Диагностика', icon: '🔬', items: [{ n: 'Консультация врача', p: '0 ₽' }, { n: 'Рентген 1 снимок', p: '500 ₽' }, { n: 'КТ 3D (челюсть)', p: '2 500 ₽' }, { n: 'Чистка Ultrasound', p: '2 200 ₽' }] },
-  { title: 'Гигиена', icon: '🦷', items: [{ n: 'Профгигиена Air Flow', p: '4 500 ₽' }, { n: 'Чистка камня ультразвук', p: '3 000 ₽' }, { n: 'Иригирование', p: '800 ₽' }, { n: 'Фторирование', p: '600 ₽' }] },
-  { title: 'Отбеливание', icon: '✨', items: [{ n: 'ZOOM в клинике', p: '18 000 ₽' }, { n: 'Домовое каппы', p: '12 000 ₽' }, { n: 'Комбо (клиника+дом)', p: '25 000 ₽' }] },
-  { title: 'Терапия', icon: '🩺', items: [{ n: 'Лечение кариеса', p: '4 500 ₽' }, { n: 'Лечение пульпита', p: '9 000 ₽' }, { n: 'Лечение периодонтита', p: '11 000 ₽' }, { n: 'Пломба световая', p: '3 500 ₽' }] },
-  { title: 'Эндодонтия', icon: '🔍', items: [{ n: 'Лечение каналов (1 канал)', p: '2 500 ₽' }, { n: 'Лечение каналов (3 канала)', p: '7 500 ₽' }, { n: 'Ретретирование каналов', p: '12 000 ₽' }] },
-  { title: 'Хирургия', icon: '⚕️', items: [{ n: 'Удаление зуба', p: '2 500 ₽' }, { n: 'Удаление сложного', p: '5 000 ₽' }, { n: 'Удаление девента', p: '4 000 ₽' }, { n: 'Костная пластика', p: '15 000 ₽' }] },
-  { title: 'Имплантология', icon: 'implant', items: [{ n: 'Установка импланта', p: 'от 22 000 ₽' }, { n: 'Открытый абатмент', p: '8 000 ₽' }, { n: 'Коронка на импланте', p: 'от 28 000 ₽' }, { n: 'All-on-4', p: 'от 180 000 ₽' }] },
-  { title: 'Ортопедия', icon: '🔧', items: [{ n: 'Виниры', p: 'от 12 000 ₽' }, { n: 'Коронка цирконий', p: '18 000 ₽' }, { n: 'Мостовидный протез', p: 'от 15 000 ₽' }, { n: 'Съёмный протез', p: 'от 8 000 ₽' }] },
-  { title: 'Пародонтология', icon: '🩻', items: [{ n: 'Лечение десны', p: '3 500 ₽' }, { n: 'Кюретаж', p: '6 000 ₽' }, { n: 'Шинирование', p: '4 000 ₽' }] },
-  { title: 'Ортодонтия', icon: '🦷', items: [{ n: 'Брекеты металл', p: 'от 60 000 ₽' }, { n: 'Элайнеры (ряд)', p: 'от 45 000 ₽' }, { n: 'Ретейнер', p: '6 000 ₽' }] }
+  { title: 'Диагностика', items: [{ n: 'Консультация врача', p: '0 ₽' }, { n: 'Рентген 1 снимок', p: '500 ₽' }, { n: 'КТ 3D (челюсть)', p: '2 500 ₽' }, { n: 'Чистка Ultrasound', p: '2 200 ₽' }] },
+  { title: 'Гигиена', items: [{ n: 'Профгигиена Air Flow', p: '4 500 ₽' }, { n: 'Чистка камня ультразвук', p: '3 000 ₽' }, { n: 'Иригирование', p: '800 ₽' }, { n: 'Фторирование', p: '600 ₽' }] },
+  { title: 'Отбеливание', items: [{ n: 'ZOOM в клинике', p: '18 000 ₽' }, { n: 'Домовое каппы', p: '12 000 ₽' }, { n: 'Комбо (клиника+дом)', p: '25 000 ₽' }] },
+  { title: 'Терапия', items: [{ n: 'Лечение кариеса', p: '4 500 ₽' }, { n: 'Лечение пульпита', p: '9 000 ₽' }, { n: 'Лечение периодонтита', p: '11 000 ₽' }, { n: 'Пломба световая', p: '3 500 ₽' }] },
+  { title: 'Эндодонтия', items: [{ n: 'Лечение каналов (1 канал)', p: '2 500 ₽' }, { n: 'Лечение каналов (3 канала)', p: '7 500 ₽' }, { n: 'Ретретирование каналов', p: '12 000 ₽' }] },
+  { title: 'Хирургия', items: [{ n: 'Удаление зуба', p: '2 500 ₽' }, { n: 'Удаление сложного', p: '5 000 ₽' }, { n: 'Удаление девента', p: '4 000 ₽' }, { n: 'Костная пластика', p: '15 000 ₽' }] },
+  { title: 'Имплантология', items: [{ n: 'Установка импланта', p: 'от 22 000 ₽' }, { n: 'Открытый абатмент', p: '8 000 ₽' }, { n: 'Коронка на импланте', p: 'от 28 000 ₽' }, { n: 'All-on-4', p: 'от 180 000 ₽' }] },
+  { title: 'Ортопедия', items: [{ n: 'Виниры', p: 'от 12 000 ₽' }, { n: 'Коронка цирконий', p: '18 000 ₽' }, { n: 'Мостовидный протез', p: 'от 15 000 ₽' }, { n: 'Съёмный протез', p: 'от 8 000 ₽' }] },
+  { title: 'Пародонтология', items: [{ n: 'Лечение десны', p: '3 500 ₽' }, { n: 'Кюретаж', p: '6 000 ₽' }, { n: 'Шинирование', p: '4 000 ₽' }] },
+  { title: 'Ортодонтия', items: [{ n: 'Брекеты металл', p: 'от 60 000 ₽' }, { n: 'Элайнеры (ряд)', p: 'от 45 000 ₽' }, { n: 'Ретейнер', p: '6 000 ₽' }] }
 ];
 
 function buildPrices() {
   const list = document.getElementById('accList');
+  const icons = Array.from(document.querySelectorAll('#dirsRow .dir-circle .ic svg'));
   list.innerHTML = services.map((s, i) => `
     <div class="acc" id="acc${i}">
       <div class="acc-head" onclick="toggleAcc(${i})">
-        <div class="aic">${s.icon}</div>
-        <b>${s.title}</b>
+        <div class="aic">${icons[i] ? icons[i].outerHTML : ''}</div>
+        <b>${esc(s.title)}</b>
         <div class="pm"></div>
       </div>
       <div class="acc-body"><div class="acc-inner">
-        <div class="labels"><span>Услуга</span><span>Цена</span><span></span></div>
-        <p class="desc">${s.items[0]?.n ? 'Стоимость при отсутствии осложнений. Точную смету фиксируем договором.' : ''}</p>
-        ${s.items.map(it => `<div class="price-row"><span class="pr">${it.n}</span><span class="pr">${it.p}</span><button class="go" onclick="quickOrder('${it.n}', true)">Записать</button></div>`).join('')}
-        <div class="acc-cta"><button class="btn btn-champ" onclick="openModal('lead')">Записаться на приём →</button></div>
+        <div class="labels"><span>Услуга</span><span>Цена и запись</span></div>
+        <p class="desc">Стоимость при отсутствии осложнений. Точную смету фиксируем договором.</p>
+        ${s.items.map(it => `<div class="price-row"><span class="nm">${esc(it.n)}</span><span class="pv-wrap"><span class="pr">${esc(it.p)}</span><button class="go" onclick="quickOrder('${s.title}: ${it.n}')">Записаться</button></span></div>`).join('')}
+        <div class="acc-cta"><button class="btn btn-champ" onclick="quickOrder('Направление: ${s.title}','Запись на приём')">Записаться на приём →</button></div>
       </div></div>
     </div>
   `).join('');
   const sel = document.getElementById('fService');
-  sel.innerHTML = '<option value="">— не выбрано —</option>' + services.flatMap(s => s.items.map(it => `<option value="${it.n}">${s.title}: ${it.n}</option>`)).join('');
+  sel.innerHTML = '<option value="">— не выбрано —</option>' + services.flatMap(s => s.items.map(it => `<option value="${esc(it.n)}">${esc(s.title)}: ${esc(it.n)}</option>`)).join('');
 }
 function toggleAcc(i) {
   const a = document.getElementById('acc' + i);
@@ -805,9 +876,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // Мобильное меню, header, scroll
 // ============================================================
 function mmClose() { document.getElementById('mobileMenu').classList.remove('open'); }
-window.addEventListener('scroll', () => {
-  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
-});
 function scrollTo_(id) { document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); }
 function skipSplash() { document.getElementById('splash').classList.add('hide'); }
 
@@ -827,16 +895,23 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================================
-// Доктор виджет
+// Скролл: шапка, виджет врача, плавающие кнопки
 // ============================================================
+const headerEl = document.getElementById('header');
+const docWidgetEl = document.getElementById('docWidget');
+const fabBarEl = document.getElementById('fabBar');
+let scrollTick = false;
+function onScroll() {
+  const y = window.scrollY;
+  headerEl.classList.toggle('scrolled', y > 60);
+  if (docWidgetEl) docWidgetEl.classList.toggle('show', y > 600);
+  if (fabBarEl) fabBarEl.classList.toggle('show', y > 800);
+  scrollTick = false;
+}
 window.addEventListener('scroll', () => {
-  const w = document.getElementById('docWidget');
-  if (w) w.classList.toggle('show', window.scrollY > 600);
-});
-window.addEventListener('scroll', () => {
-  const b = document.getElementById('fabBar');
-  if (b) b.classList.toggle('show', window.scrollY > 800);
-});
+  if (!scrollTick) { scrollTick = true; requestAnimationFrame(onScroll); }
+}, { passive: true });
+onScroll();
 // ============================================================
 // Открытие направления по клику на кружок
 // ============================================================
@@ -878,7 +953,60 @@ function initGloveHint() {
   }, 1500);
   window.addEventListener('resize', () => place(idx));
 }
-window.addEventListener('DOMContentLoaded', initGloveHint);
+// ============================================================
+// Анимации: появление блоков, счётчики, параллакс hero
+// ============================================================
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!reduceMotion && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .15, rootMargin: '0px 0px -60px' });
+
+  document.querySelectorAll('.sec-title, .sec-sub, #prices .acc, #team .doc, .trust-item, #reviews .review, .map-box, .lead-form, .lic')
+    .forEach(el => { el.classList.add('reveal'); io.observe(el); });
+
+  document.querySelectorAll('#team .doc, .trust-item, #reviews .review')
+    .forEach((el, i) => { el.style.setProperty('--rd', (i % 4) * 90 + 'ms'); });
+
+  function countUp(el) {
+    const node = el.firstChild;
+    const m = (node && node.nodeValue || '').match(/^(\d+(?:[.,]\d+)?)(\s*.*)$/);
+    if (!m) return;
+    const target = parseFloat(m[1].replace(',', '.'));
+    const dec = /[.,]/.test(m[1]) ? 1 : 0;
+    const t0 = performance.now(), dur = 1300;
+    (function step(t) {
+      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      node.nodeValue = (target * e).toFixed(dec).replace('.', ',') + m[2];
+      if (k < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+
+  const ioNum = new IntersectionObserver((entries, obs) => entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const item = e.target.closest('.trust-item');
+    const rd = item ? parseFloat(item.style.getPropertyValue('--rd')) || 0 : 0;
+    setTimeout(() => countUp(e.target), rd);
+    obs.unobserve(e.target);
+  }), { threshold: .15, rootMargin: '0px 0px -60px' });
+  document.querySelectorAll('.trust-item .num').forEach(n => ioNum.observe(n));
+}
+
+const heroPhoto = document.querySelector('.hero-visual .photo-wrap');
+if (!reduceMotion && heroPhoto && window.matchMedia('(hover:hover) and (min-width: 993px)').matches) {
+  const hero = document.querySelector('.hero');
+  hero.addEventListener('mousemove', e => {
+    const r = heroPhoto.getBoundingClientRect();
+    const dx = (e.clientX - (r.left + r.width / 2)) / r.width;
+    const dy = (e.clientY - (r.top + r.height / 2)) / r.height;
+    heroPhoto.style.transform = `translate3d(${dx * 10}px, ${dy * 8}px, 0)`;
+  });
+  hero.addEventListener('mouseleave', () => { heroPhoto.style.transform = ''; });
+}
+
+if (reduceMotion) skipSplash();
+else window.addEventListener('DOMContentLoaded', initGloveHint);
 </script>
 </body>
 </html>
