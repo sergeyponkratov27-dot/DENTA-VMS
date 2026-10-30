@@ -236,7 +236,7 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .consent input{width:auto;margin-top:2px;accent-color:var(--wood)}
 .consent a{color:var(--wood)}
 #legal{overflow:hidden}
-#legal .lic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
+#legal .lic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
 .lic{background:rgba(255,255,255,.05);border:1px solid rgba(244,241,234,.14);border-radius:var(--radius);padding:26px;text-align:center;cursor:pointer;transition:all .35s;backdrop-filter:blur(6px)}
 .lic:hover{transform:translateY(-5px);border-color:var(--champagne);box-shadow:0 20px 46px rgba(0,0,0,.35)}
 .lic-preview{display:block;width:100%;height:176px;margin:0 auto 16px;border:1px solid rgba(244,241,234,.2);border-radius:8px;background:#f4f1ea;pointer-events:none}
@@ -246,18 +246,32 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .lic small{color:rgba(244,241,234,.55);font-size:12px}
 .legal-note{margin-top:26px;color:rgba(244,241,234,.55);font-size:13px;max-width:820px;position:relative}
 .legal-note b{color:#f4f1ea}
-.team{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.doc{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:all .4s cubic-bezier(.2,.8,.2,1);box-shadow:var(--shadow);display:flex;flex-direction:column}
-.doc:hover{transform:translateY(-8px);border-color:var(--wood);box-shadow:var(--shadow-hi)}
-.doc .ph{aspect-ratio:1/1.06;background:linear-gradient(160deg,#f2f4f4,#e3e6e5);position:relative;overflow:hidden}
-.doc .ph img{display:block;width:100%;height:100%;object-fit:cover}
-.doc .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(250,248,243,.95))}
-.doc .exp{position:absolute;top:14px;left:14px;background:#fff;border:1px solid var(--line);color:var(--ink);font-size:12px;font-weight:700;border-radius:999px;padding:5px 12px;z-index:2;box-shadow:var(--shadow)}
-.doc .info{padding:20px;position:relative;margin-top:-34px;display:flex;flex-direction:column;flex:1}
-.doc .info b{font-size:16.5px;display:block;margin-bottom:4px;font-weight:800}
-.doc .info .spec{color:var(--wood);font-size:12.5px;font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em}
-.doc .info p{color:var(--muted);font-size:13px;margin-bottom:16px;min-height:62px}
-.doc .btn{width:100%;padding:11px;font-size:13px;margin-top:auto}
+.section-founder{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:46px 40px;box-shadow:var(--shadow);margin-top:28px;position:relative;overflow:hidden}
+.section-founder::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--wood) 0%,rgba(185,169,138,.4) 60%,transparent 100%)}
+.founder-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px;align-items:start}
+.founder-photo-wrap{position:relative}
+.founder-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/4.8;box-shadow:0 20px 60px -20px rgba(38,40,42,.35),0 4px 16px rgba(38,40,42,.08);border:3px solid rgba(185,169,138,.35);background:linear-gradient(160deg,#f8f9f9 0%,#e9ecea 45%,#cfc6b8 100%);position:relative}
+.founder-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.founder-badge{position:absolute;top:-12px;left:-12px;background:var(--wood);color:#fff;padding:8px 16px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;box-shadow:0 8px 20px rgba(185,169,138,.4);z-index:2}
+.founder-name{margin-top:22px;text-align:center}
+.founder-name h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--ink);margin:0 0 6px 0;text-shadow:0 2px 8px rgba(38,40,42,.08)}
+.founder-name .spec{font-size:13px;color:var(--wood);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.founder-content h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,34px);font-weight:700;color:var(--ink);margin-bottom:18px;text-shadow:0 3px 12px rgba(38,40,42,.1),0 1px 3px rgba(38,40,42,.06)}
+.founder-content .intro{font-size:15.5px;line-height:1.7;color:var(--ink-soft);margin-bottom:24px}
+.founder-bio{display:grid;gap:24px;margin:28px 0}
+.founder-bio-block{background:var(--bg2);border-left:3px solid var(--wood);padding:18px 20px;border-radius:0 14px 14px 0}
+.founder-bio-block h4{font-size:13px;font-weight:700;color:var(--wood);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.founder-bio-block p,.founder-bio-block li{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin:0}
+.founder-bio-block ul{list-style:none;padding:0;margin:8px 0 0 0;display:grid;gap:6px}
+.founder-bio-block li{position:relative;padding-left:22px}
+.founder-bio-block li::before{content:"✓";position:absolute;left:0;color:var(--wood);font-weight:700;font-size:15px}
+.founder-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:28px 0}
+.founder-stat{background:linear-gradient(135deg,rgba(185,169,138,.08),rgba(185,169,138,.04));border:1px solid rgba(185,169,138,.2);border-radius:14px;padding:18px 16px;text-align:center}
+.founder-stat .num{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--wood);display:block;line-height:1.1}
+.founder-stat .label{font-size:12.5px;color:var(--muted);margin-top:6px;display:block}
+.founder-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+@media(max-width:900px){.section-founder{padding:28px 20px}.founder-grid{grid-template-columns:1fr;gap:32px}.founder-photo{max-height:380px}.founder-photo-wrap{max-width:340px;margin:0 auto}.founder-cta{justify-content:center}}
+@media(max-width:480px){.founder-stats{grid-template-columns:1fr}.founder-cta{flex-direction:column}.founder-cta .btn{width:100%}}
 #contacts::after{content:"";position:absolute;top:0;right:0;bottom:0;width:46%;pointer-events:none;z-index:0;background-image:linear-gradient(to right,var(--bg) 0%,rgba(251,252,252,.8) 38%,rgba(251,252,252,0) 80%),url("innovation.jpg");background-repeat:no-repeat,no-repeat;background-position:left center,right center;background-size:100% 100%,auto 100%}
 #contacts .wrap{position:relative;z-index:2}
 #reviews{background:var(--bg2)}
@@ -448,7 +462,7 @@ footer a:hover{color:var(--wood)}
   <a class="mnav" href="tel:+79309115500">📞 +7 (930) 911-55-00</a>
   <a class="mnav" href="https://t.me/dentavv" target="_blank" rel="noopener">Telegram - @dentavv</a>
   <a class="mnav" href="#prices" onclick="mmClose()">Услуги и цены</a>
-  <a class="mnav" href="#team" onclick="mmClose()">Врачи</a>
+  <a class="mnav" href="#team" onclick="mmClose()">Основатель</a>
   <a class="mnav" href="#contacts" onclick="mmClose()">Контакты</a>
   <button class="btn btn-dark" onclick="mmClose();openModal('lead')">Записаться на приём</button>
 </nav>
@@ -526,25 +540,73 @@ footer a:hover{color:var(--wood)}
 </section>
 <section id="team">
   <div class="wrap">
-    <span class="kicker">Наши врачи</span>
-    <h2 class="sec-title">Команда, которой доверяют улыбку</h2>
-    <p class="sec-sub">Каждый врач Denta V - специалист высшей категории со стажем от 10 лет.</p>
-    <div class="team">
-      <div class="doc">
-        <div class="ph"><img src="doctor.jpg" alt="Владимир Вербицкий" /><div class="exp">опыт 14 лет</div></div>
-        <div class="info"><b>Владимир Вербицкий</b><div class="spec">Главный врач · терапевт, имплантолог</div><p>Врач высшей категории. Микроскоп, сложные реставрации, имплантация. Личный приём в Telegram - отвечаю сам.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Владимиру Вербицкому','Запись к врачу')">Записаться к врачу</button></div>
-      </div>
-      <div class="doc">
-        <div class="ph"><img src="gromov.jpg" alt="Дмитрий Громов" /><div class="exp">опыт 12 лет</div></div>
-        <div class="info"><b>Дмитрий Громов</b><div class="spec">Хирург-имплантолог</div><p>Кандидат медицинских наук. Сложное удаление, костная пластика, более 2000 установленных имплантов.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Дмитрию Громову','Запись к врачу')">Записаться к врачу</button></div>
-      </div>
-      <div class="doc">
-        <div class="ph"><img src="sokolova.jpg" alt="Анна Соколова" /><div class="exp">опыт 11 лет</div></div>
-        <div class="info"><b>Анна Соколова</b><div class="spec">Ортодонт</div><p>Брекет-системы и элайнеры для взрослых и детей. Цифровое планирование прикуса, честные прогнозы лечения.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Анне Соколовой','Запись к врачу')">Записаться к врачу</button></div>
-      </div>
-      <div class="doc">
-        <div class="ph"><img src="lebedeva.jpg" alt="Мария Лебедева" /><div class="exp">опыт 10 лет</div></div>
-        <div class="info"><b>Мария Лебедева</b><div class="spec">Детский стоматолог</div><p>Лечение без страха и слёз: адаптационные приёмы, работа с детьми. Дети идут к ней сами.</p><button class="btn btn-dark" onclick="quickOrder('Приём к Марии Лебедевой','Запись к врачу')">Записаться к врачу</button></div>
+    <span class="kicker">Основатель клиники</span>
+    <h2 class="sec-title">Вербицкий Владимир Валерьевич</h2>
+    <p class="sec-sub">Главный врач · стоматолог-терапевт, имплантолог высшей категории</p>
+    <div class="section-founder">
+      <div class="founder-grid">
+        <div class="founder-photo-wrap">
+          <div class="founder-badge">Основатель</div>
+          <div class="founder-photo"><img src="doctor.jpg" alt="Владимир Вербицкий — основатель и главный врач клиники Denta V" /></div>
+          <div class="founder-name">
+            <h3>В. Вербицкий</h3>
+            <div class="spec">Врач высшей категории</div>
+          </div>
+        </div>
+        <div class="founder-content">
+          <h2>Основал клинику Denta V в 2026 году</h2>
+          <p class="intro">Родился в Минске, с детства мечтал восстанавливать людям улыбки. После 14 лет практики в ведущих клиниках Москвы и Минска открыл собственную стоматологию премиум-класса в Москве, где лично ведёт приём и отвечает за каждый случай.</p>
+          
+          <div class="founder-bio">
+            <div class="founder-bio-block">
+              <h4>🎓 Образование</h4>
+              <p><strong>БГМУ, г. Минск</strong> (2007–2012) — стоматологический факультет</p>
+              <p><strong>Ординатура БГМУ</strong> (2012–2014) — терапевтическая стоматология</p>
+              <p><strong>МГМСУ, Москва</strong> (2016) — имплантология и ортопедия</p>
+            </div>
+            <div class="founder-bio-block">
+              <h4>📜 Сертификаты и курсы</h4>
+              <ul>
+                <li>Leica Dental Microscope (2018) — работа с микроскопом</li>
+                <li>Straumann Bone Grafting (2019) — костная пластика</li>
+                <li>Cerinate Veneers (2020) — эстетическая реставрация</li>
+                <li>ESDI Annual Courses (2017–2025) — европейская имплантология</li>
+              </ul>
+            </div>
+            <div class="founder-bio-block">
+              <h4>🏆 Профессиональное признание</h4>
+              <ul>
+                <li>Член Российской стоматологической ассоциации (РSA)</li>
+                <li>Член Белорусской стоматологической ассоциации</li>
+                <li>Спикер международных конференций по имплантологии</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="founder-stats">
+            <div class="founder-stat">
+              <span class="num">14+</span>
+              <span class="label">лет опыта</span>
+            </div>
+            <div class="founder-stat">
+              <span class="num">3000+</span>
+              <span class="label">имплантов</span>
+            </div>
+            <div class="founder-stat">
+              <span class="num">98%</span>
+              <span class="label">успешных случаев</span>
+            </div>
+            <div class="founder-stat">
+              <span class="num">4</span>
+              <span class="label">приёма в неделю</span>
+            </div>
+          </div>
+          
+          <div class="founder-cta">
+            <button class="btn btn-dark" onclick="quickOrder('Приём к Владимиру Вербицкому','Запись к врачу')">Записаться к врачу</button>
+            <a class="btn btn-line" href="https://t.me/verbeets" target="_blank" rel="noopener">✈️ Написать в Telegram</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -557,7 +619,8 @@ footer a:hover{color:var(--wood)}
     <div class="lic-grid">
       <div class="lic" onclick="window.open('license.pdf','_blank')" title="Откроется PDF в новой вкладке"><iframe class="lic-preview" src="license.pdf#page=1&amp;toolbar=0&amp;navpanes=0" title="Превью медицинской лицензии" loading="lazy"></iframe><b>Медицинская лицензия</b><small>№ Л041-01137-77/07118634 · выписка из реестра (PDF)</small></div>
       <div class="lic" onclick="window.open('license-notice.pdf','_blank')" title="Откроется PDF в новой вкладке"><iframe class="lic-preview" src="license-notice.pdf#page=1&amp;toolbar=0&amp;navpanes=0" title="Превью уведомления о лицензии" loading="lazy"></iframe><b>Уведомление о лицензии</b><small>Приказ ДЗМ № 1319-Л от 28.09.2026 (PDF)</small></div>
-      <div class="lic" onclick="openScan('Санэпидзаключение','Роспотребнадзор · скан предоставляем по запросу')"><div class="doc-icon">🛡</div><b>Санэпидзаключение</b><small>Соответствие СанПиН · нажмите для просмотра</small></div>
+      <div class="lic" onclick="window.open('СЭЗ.pdf','_blank')" title="Откроется PDF в новой вкладке"><iframe class="lic-preview" src="СЭЗ.pdf#page=1&amp;toolbar=0&amp;navpanes=0" title="Превью санитарно-эпидемиологического заключения" loading="lazy"></iframe><b>Санэпидзаключение</b><small>Роспотребнадзор · соответствие СанПиН (PDF)</small></div>
+      <div class="lic" onclick="window.open('Портал_персональных_данных_Реестр.pdf','_blank')" title="Откроется PDF в новой вкладке"><iframe class="lic-preview" src="Портал_персональных_данных_Реестр.pdf#page=1&amp;toolbar=0&amp;navpanes=0" title="Превью записи в реестре Роскомнадзора" loading="lazy"></iframe><b>Реестр Роскомнадзора</b><small>Уведомление о начале обработки персональных данных (PDF)</small></div>
     </div>
     <p class="legal-note"><b>Лицензируемые виды работ:</b> стоматология терапевтическая, хирургическая, ортопедическая, детская, общей практики; ортодонтия; сестринское дело. ОГРН 1267700251708 · ИНН 9726116604. Имеются противопоказания - необходима консультация специалиста.</p>
   </div>
@@ -610,7 +673,7 @@ footer a:hover{color:var(--wood)}
       <div>📞 <a href="tel:+79309115500">+7 (930) 911-55-00</a><br>✈️ <a href="https://t.me/dentavv" target="_blank" rel="noopener">Telegram: @dentavv</a><br>📍 Москва, ул. Болотниковская, 1, корп. 2</div>
     </div>
     <p class="fdisclaimer"><b>ООО «Стоматологическая клиника Дента В»</b>, ОГРН 1267700251708, ИНН 9726116604, адрес: 117556, г. Москва, ул. Болотниковская, д. 1, корп. 2, помещ. 2/1. Медицинская лицензия № Л041-01137-77/07118634 от 28.09.2026, выдана Департаментом здравоохранения города Москвы (приказ № 1319-Л от 28.09.2026). Имеются противопоказания, необходима консультация специалиста. Информация на сайте не является публичной офертой. © 2026 Клиника Denta V. Все права защищены.</p>
-    <div style="margin-top:20px;padding-top:15px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);max-width:820px;line-height:1.5;"><strong style="color:var(--ink-soft)">Оператор персональных данных:</strong> Общество с ограниченной ответственностью «Дента В» (ООО «Дента В»), ИНН 9726116604, ОГРН 1267700251708. Адрес: 117556, г. Москва, ул. Болотниковская, д. 1, корп. 2, помещ. 2/1. Контактный телефон: +7 (930) 911-55-00. Электронная почта: info@dentav.ru. <a href="#" class="privacy-link" onclick="showPrivacyPage();return false;" style="margin-left:5px;">Политика обработки персональных данных</a>.</div>
+    <div style="margin-top:20px;padding-top:15px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);max-width:820px;line-height:1.5;"><strong style="color:var(--ink-soft)">Оператор персональных данных:</strong> Общество с ограниченной ответственностью «Дента В» (ООО «Дента В»), ИНН 9726116604, ОГРН 1267700251708. Адрес: 117556, г. Москва, ул. Болотниковская, д. 1, корп. 2, помещ. 2/1. Контактный телефон: +7 (930) 911-55-00. Электронная почта: info@dentav.ru. <a href="#" class="privacy-link" onclick="showPrivacyPage();return false;" style="margin-left:5px;">Политика обработки персональных данных</a>. <span style="margin-left:8px;color:var(--wood)">Запись в реестре РКН № 77-25-048825 от 28.09.2026</span>.</div>
   </div>
 </footer>
 <div id="docWidget">
@@ -640,7 +703,7 @@ footer a:hover{color:var(--wood)}
     <div class="privacy-section"><h2>6. Защита персональных данных</h2><ul><li>Передача по протоколу HTTPS;</li><li>Шифрование данных при передаче;</li><li>Ограничение доступа только уполномоченным сотрудникам;</li><li>Регулярный аудит безопасности.</li></ul></div>
     <div class="privacy-section"><h2>7. Файлы cookie и третьи лица</h2><p>Сайт использует cookie для запоминания настроек и анализа посещаемости (Яндекс.Метрика / Google Analytics). Вы можете управлять cookie в настройках браузера. Передача данных третьим лицам осуществляется только в случаях, предусмотренных законодательством РФ.</p></div>
     <div class="privacy-section"><h2>8. Изменения в Политике</h2><p>Оператор вправе вносить изменения. О существенных изменениях будет размещена соответствующая информация на Сайте. Рекомендуется периодически проверять данную страницу.</p></div>
-    <div class="privacy-section"><h2>9. Контакты для вопросов</h2><ul><li>Тел.: +7 (930) 911-55-00</li><li>E-mail: info@dentav.ru</li><li>Адрес: 117556, г. Москва, ул. Болотниковская, д. 1, корп. 2, пом. 2/1</li></ul></div>
+    <div class="privacy-section"><h2>9. Контакты для вопросов</h2><ul><li>Тел.: +7 (930) 911-55-00</li><li>E-mail: info@dentav.ru</li><li>Адрес: 117556, г. Москва, ул. Болотниковская, д. 1, корп. 2, пом. 2/1</li></ul><p style="margin-top:14px;font-size:13.5px;color:var(--ink-soft)"><strong>Реестр операторов персональных данных:</strong> Сведения о регистрации оператора в реестре РКН доступны по ссылке: <a href="Портал_персональных_данных_Реестр.pdf" target="_blank" rel="noopener" style="color:var(--wood)">выписка из реестра (PDF)</a>. Запись № 77-25-048825 от 28.09.2026.</p></div>
     <div class="privacy-footer-note"><p>Настоящая Политика соответствует требованиям ФЗ-152 «О персональных данных» и ФЗ-149 «Об информации, информационных технологиях и о защите информации».</p><p style="margin-top:10px;">© 2026 ООО «Дента В». Все права защищены.</p></div>
   </div>
 </div>
@@ -963,10 +1026,10 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
   }), { threshold: .15, rootMargin: '0px 0px -60px' });
 
-  document.querySelectorAll('.sec-title, .sec-sub, #prices .acc, #team .doc, .trust-item, #reviews .review, .map-box, .lead-form, .lic')
+  document.querySelectorAll('.sec-title, .sec-sub, #prices .acc, .section-founder, .trust-item, #reviews .review, .map-box, .lead-form, .lic')
     .forEach(el => { el.classList.add('reveal'); io.observe(el); });
 
-  document.querySelectorAll('#team .doc, .trust-item, #reviews .review')
+  document.querySelectorAll('.section-founder, .trust-item, #reviews .review')
     .forEach((el, i) => { el.style.setProperty('--rd', (i % 4) * 90 + 'ms'); });
 
   function countUp(el) {
