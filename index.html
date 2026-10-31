@@ -24,7 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":["MedicalBusiness","Dentist"],"name":"Стоматологическая клиника Denta V","slogan":"Улыбайтесь вместе с Denta V","url":"https://dentav.ru","telephone":"+7-930-911-55-00","priceRange":"₽₽","medicalSpecialty":"Dentistry","address":{"@type":"PostalAddress","addressCountry":"RU","addressLocality":"Москва","streetAddress":"ул. Болотниковская, 1, корпус 2, помещение 2/1","postalCode":"117556"},"geo":{"@type":"GeoCoordinates","latitude":55.6593,"longitude":37.6016},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"312"},"founder":{"@type":"Physician","name":"Вербицкий Владимир","jobTitle":"Врач-стоматолог высшей категории","telephone":"+7-930-911-55-00","sameAs":["https://t.me/verbeets"]},"employee":[{"@type":"Physician","name":"Вербицкий Владимир","jobTitle":"Стоматолог-терапевт, имплантолог"},{"@type":"Physician","name":"Соколова Анна","jobTitle":"Ортодонт"},{"@type":"Physician","name":"Громов Дмитрий","jobTitle":"Хирург-имплантолог"},{"@type":"Physician","name":"Лебедева Мария","jobTitle":"Детский стоматолог"}]}
+{"@context":"https://schema.org","@type":["MedicalBusiness","Dentist"],"name":"Стоматологическая клиника Denta V","slogan":"Улыбайтесь вместе с Denta V","url":"https://dentav.ru","telephone":"+7-930-911-55-00","priceRange":"₽₽","medicalSpecialty":"Dentistry","address":{"@type":"PostalAddress","addressCountry":"RU","addressLocality":"Москва","streetAddress":"ул. Болотниковская, 1, корпус 2, помещение 2/1","postalCode":"117556"},"geo":{"@type":"GeoCoordinates","latitude":55.6593,"longitude":37.6016},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"21:00"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"312"},"founder":{"@type":"Physician","name":"Вербицкий Владимир","jobTitle":"Врач-стоматолог высшей категории","telephone":"+7-930-911-55-00","sameAs":["https://t.me/verbeets"]},"employee":[{"@type":"Physician","name":"Вербицкий Владимир","jobTitle":"Стоматолог-терапевт, имплантолог"},{"@type":"Physician","name":"Соколова Анна","jobTitle":"Ортодонт"},{"@type":"Physician","name":"Громов Дмитрий","jobTitle":"Хирург-имплантолог"},{"@type":"Physician","name":"Лебедева Мария","jobTitle":"Детский стоматолог"}]}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -129,11 +129,8 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 .photo-wrap .photo{width:100%;height:100%;object-fit:cover;border-radius:0;border:0;box-shadow:none;aspect-ratio:auto;display:block}
 .photo-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 34%,rgba(255,255,255,.4) 50%,transparent 64%);transform:translateX(-70%);animation:photoSheen 6s ease-in-out infinite;pointer-events:none}
 @keyframes photoSheen{0%,55%{transform:translateX(-80%)}90%,100%{transform:translateX(80%)}}
-.rating-chip{position:absolute;z-index:2;bottom:22px;left:22px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-radius:16px;padding:10px 16px;box-shadow:var(--shadow-hi);transition:all .3s}
-.rating-chip:hover{transform:scale(1.05)}
-.rating-chip .rv{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#f0e9dd,#b9a98a);display:flex;align-items:center;justify-content:center;font-weight:800;color:#2c2414;font-size:13px}
-.rating-chip b{font-size:14px;display:block}
-.rating-chip small{color:var(--muted);font-size:11.5px}
+.rating-chip{position:absolute;z-index:2;bottom:22px;left:22px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-radius:16px;padding:10px 14px;box-shadow:var(--shadow-hi);display:inline-block}
+.rating-chip iframe{display:block;border-radius:8px}
 .badge-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}
 .badge{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 15px;font-size:13.5px;color:var(--ink-soft);box-shadow:var(--shadow);transition:all .3s}
 .badge:hover{transform:translateY(-3px);border-color:var(--wood)}
@@ -216,6 +213,7 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 }
 .maplead{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:stretch}
 .map-box{border-radius:24px;border:1px solid var(--line);overflow:hidden;position:relative;min-height:440px;background:linear-gradient(160deg,#fff,#f0eadd);box-shadow:var(--shadow-hi)}
+.map-box iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
 .map-embed{display:block;width:100%;height:100%;padding:0;border:0;position:absolute;inset:0}
 .map-pin{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#f0e9dd,#b9a98a);display:flex;align-items:center;justify-content:center;animation:pulse 2s infinite}
 .map-pin svg{width:26px;height:26px;fill:#2c2414}
@@ -274,8 +272,10 @@ header.scrolled{background:rgba(250,248,243,.9);backdrop-filter:blur(16px);box-s
 @media(max-width:480px){.founder-stats{grid-template-columns:1fr}.founder-cta{flex-direction:column}.founder-cta .btn{width:100%}}
 #contacts::after{content:"";position:absolute;top:0;right:0;bottom:0;width:46%;pointer-events:none;z-index:0;background-image:linear-gradient(to right,var(--bg) 0%,rgba(251,252,252,.8) 38%,rgba(251,252,252,0) 80%),url("innovation.jpg");background-repeat:no-repeat,no-repeat;background-position:left center,right center;background-size:100% 100%,auto 100%}
 #contacts .wrap{position:relative;z-index:2}
-#reviews{background:var(--bg2)}
-.trust-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:46px}
+#reviews{background:url('otzivfon.jpg') center/cover no-repeat;background-attachment:fixed;min-height:600px}
+.reviews-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:stretch;margin-bottom:46px}
+.reviews-widget{height:500px;overflow:hidden;position:relative;border-radius:18px;box-shadow:0 18px 50px rgba(44,44,44,.10);background:var(--card)}
+.reviews-stats{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:16px}
 .trust-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center;transition:all .35s;box-shadow:var(--shadow)}
 .trust-item:hover{transform:translateY(-4px);border-color:var(--wood)}
 .trust-item .num{font-size:28px;font-weight:800;color:var(--ink);text-shadow:0 4px 16px rgba(38,40,42,.15),0 2px 4px rgba(38,40,42,.08)}
@@ -375,7 +375,8 @@ footer a:hover{color:var(--wood)}
 @media (max-width: 992px) {
   .team { grid-template-columns: repeat(2, 1fr); }
   .reviews { grid-template-columns: repeat(2, 1fr); }
-  .trust-bar { grid-template-columns: repeat(2, 1fr); }
+  .reviews-layout { grid-template-columns: 1fr; }
+  .reviews-widget { height: 380px; }
   .hero-grid { gap: 20px; }
   .hero-visual { width: 100%; margin-left: 0; }
   .hero-visual::before { display: none; }
@@ -400,12 +401,18 @@ footer a:hover{color:var(--wood)}
   /* Картинка и рейтинг */
   .hero-visual { margin-top: 20px; }
   .photo-wrap { aspect-ratio: 4/3.5; }
-  .rating-chip { position: static; margin-top: 15px; display: inline-flex; }
+  .rating-chip { position: static; margin-top: 15px; }
 
   /* Сетки: всё в одну колонку */
-  .team, .reviews, .trust-bar { grid-template-columns: 1fr; }
+  .team, .reviews, .reviews-layout { grid-template-columns: 1fr; }
+  .reviews-widget { height: 320px; }
   .maplead { grid-template-columns: 1fr; }
   .map-box { min-height: 320px; }
+  .map-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+  @media(max-width: 768px) {
+    .map-box iframe { src="https://yandex.ru/map-widget/v1/org/denta_v/215520174170/?ll=37.622005%2C55.655516&z=14" }
+  }
 
   /* Карточки врачей: убираем наложение */
   .doc .info { margin-top: 0; }
@@ -487,7 +494,7 @@ footer a:hover{color:var(--wood)}
     </div>
     <div class="hero-visual">
       <div class="photo-wrap"><img class="photo" src="reception.jpg" alt="Ресепшен клиники Denta V" /></div>
-      <a class="rating-chip" href="#reviews" title="Рейтинг на Яндекс.Картах"><span class="rv">5.0</span><span><b>★★★★★</b><small>рейтинг на Яндекс.Картах</small></span></a>
+      <div class="rating-chip"><iframe src="https://yandex.ru/sprav/widget/rating-badge/215520174170?type=rating" width="150" height="50" frameborder="0" title="Рейтинг клиники на Яндекс.Картах" loading="lazy"></iframe></div>
     </div>
   </div>
   <div class="wrap">
@@ -632,7 +639,7 @@ footer a:hover{color:var(--wood)}
     <p class="sec-sub">Клиника находится в 300 метрах от метро Варшавская. Посмотрите маршрут и оставьте заявку на удобное время.</p>
     <div class="maplead">
       <div>
-        <div class="map-box"><iframe class="map-embed" id="mapEmbed" src="https://yandex.ru/map-widget/v1/?ll=37.615672%2C55.655963&amp;z=16&amp;pt=37.615672%2C55.655963%2Cpm2rdm" title="Яндекс.Карта: клиника Denta V, Москва, Болотниковская улица, 1 корпус 2" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+        <div class="map-box"><div class="map-embed" id="mapEmbed" style="position:relative;overflow:hidden;width:100%;height:100%;"><iframe src="https://yandex.ru/map-widget/v1/org/denta_v/215520174170/?ll=37.622005%2C55.655516&z=15" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
         <p class="howto">Москва, ул. Болотниковская, 1, корпус 2 · ежедневно 9:00-21:00 · бесплатная парковка во дворе. <a class="route-link" href="https://yandex.ru/maps/?rtext=~55.655963%2C37.615672&amp;rtt=auto" target="_blank" rel="noopener">Построить маршрут</a></p>
       </div>
       <form class="lead-form" id="leadForm" onsubmit="return submitLead(event)">
@@ -651,14 +658,17 @@ footer a:hover{color:var(--wood)}
   <div class="wrap">
     <span class="kicker">Нам доверяют</span>
     <h2 class="sec-title">Более 3000 пациентов выбрали Denta V</h2>
-    <p class="sec-sub">Реальный рейтинг клиники на Яндекс.Картах - 5.0. Мы не покупаем отзывы: каждый оставлен пациентом после лечения.</p>
-    <div class="trust-bar">
-      <div class="trust-item"><div class="num">5.0<small>★</small></div><div class="lbl">Рейтинг на Яндекс.Картах</div></div>
-      <div class="trust-item"><div class="num">3000+</div><div class="lbl">довольных пациентов</div></div>
-      <div class="trust-item"><div class="num">10 лет</div><div class="lbl">гарантия на имплантацию</div></div>
-      <div class="trust-item"><div class="num">12+</div><div class="lbl">лет опыта ведущих врачей</div></div>
+    <p class="sec-sub">Реальный рейтинг клиники на Яндекс.Картах - 4.6. Мы не покупаем отзывы: каждый оставлен пациентом после лечения.</p>
+    <div class="reviews-layout">
+      <div class="reviews-widget"><iframe style="width:100%;height:100%;border:none" src="https://yandex.ru/maps-reviews-widget/215520174170?comments" title="Отзывы клиники на Яндекс.Картах" loading="lazy"></iframe></div>
+      <div class="reviews-stats">
+        <div class="trust-item"><div class="num">4.6<small>★</small></div><div class="lbl">Рейтинг на Яндекс.Картах</div></div>
+        <div class="trust-item"><div class="num">3000+</div><div class="lbl">довольных пациентов</div></div>
+        <div class="trust-item"><div class="num">10 лет</div><div class="lbl">гарантия на имплантацию</div></div>
+        <div class="trust-item"><div class="num">12+</div><div class="lbl">лет опыта ведущих врачей</div></div>
+      </div>
     </div>
-    <div class="reviews">
+<div class="reviews">
       <div class="review"><span class="src">Яндекс.Карты</span><div class="stars">★★★★★</div><p>«Боялась стоматологов с детства. В Denta V впервые уснула в кресле! Владимир Владимирович - волшебник, всё объяснил, цена не изменилась ни на рубль.»</p><div class="who"><div class="avatar">ЕК</div><div><b>Екатерина К.</b><small>имплантация · март 2026</small></div></div></div>
       <div class="review"><span class="src">Яндекс.Карты</span><div class="stars">★★★★★</div><p>«Водила сюда ребёнка на адаптационный приём - теперь дочка сама напоминает о визит к зубному. Седация прошла идеально, без слёз.»</p><div class="who"><div class="avatar">АС</div><div><b>Анна С.</b><small>детская стоматология · февраль 2026</small></div></div></div>
       <div class="review"><span class="src">Яндекс.Карты</span><div class="stars">★★★★★</div><p>«Лечил каналы под микроскопом - то, что в другой клинике предлагали удалять, здесь спасают. Чувствуется уровень: оборудование, стерильность, подход.»</p><div class="who"><div class="avatar">МД</div><div><b>Максим Д.</b><small>лечение каналов · январь 2026</small></div></div></div>
@@ -712,7 +722,7 @@ footer a:hover{color:var(--wood)}
 // ============================================================
 // Настройки отправки заявок
 // ============================================================
-const WEB3FORMS_KEY = ''; // access key, полученный на web3forms.com
+const WEB3FORMS_KEY = '394f6be5-2ffb-4e6a-95d6-f777e4e951d5';
 
 // ============================================================
 // Автозакрытие интро
@@ -879,16 +889,16 @@ function openScan(title, sub) {
 // Аккордеон цен
 // ============================================================
 const services = [
-  { title: 'Диагностика', items: [{ n: 'Консультация врача', p: '0 ₽' }, { n: 'Рентген 1 снимок', p: '500 ₽' }, { n: 'КТ 3D (челюсть)', p: '2 500 ₽' }, { n: 'Чистка Ultrasound', p: '2 200 ₽' }] },
-  { title: 'Гигиена', items: [{ n: 'Профгигиена Air Flow', p: '4 500 ₽' }, { n: 'Чистка камня ультразвук', p: '3 000 ₽' }, { n: 'Иригирование', p: '800 ₽' }, { n: 'Фторирование', p: '600 ₽' }] },
-  { title: 'Отбеливание', items: [{ n: 'ZOOM в клинике', p: '18 000 ₽' }, { n: 'Домовое каппы', p: '12 000 ₽' }, { n: 'Комбо (клиника+дом)', p: '25 000 ₽' }] },
-  { title: 'Терапия', items: [{ n: 'Лечение кариеса', p: '4 500 ₽' }, { n: 'Лечение пульпита', p: '9 000 ₽' }, { n: 'Лечение периодонтита', p: '11 000 ₽' }, { n: 'Пломба световая', p: '3 500 ₽' }] },
-  { title: 'Эндодонтия', items: [{ n: 'Лечение каналов (1 канал)', p: '2 500 ₽' }, { n: 'Лечение каналов (3 канала)', p: '7 500 ₽' }, { n: 'Ретретирование каналов', p: '12 000 ₽' }] },
-  { title: 'Хирургия', items: [{ n: 'Удаление зуба', p: '2 500 ₽' }, { n: 'Удаление сложного', p: '5 000 ₽' }, { n: 'Удаление девента', p: '4 000 ₽' }, { n: 'Костная пластика', p: '15 000 ₽' }] },
-  { title: 'Имплантология', items: [{ n: 'Установка импланта', p: 'от 22 000 ₽' }, { n: 'Открытый абатмент', p: '8 000 ₽' }, { n: 'Коронка на импланте', p: 'от 28 000 ₽' }, { n: 'All-on-4', p: 'от 180 000 ₽' }] },
-  { title: 'Ортопедия', items: [{ n: 'Виниры', p: 'от 12 000 ₽' }, { n: 'Коронка цирконий', p: '18 000 ₽' }, { n: 'Мостовидный протез', p: 'от 15 000 ₽' }, { n: 'Съёмный протез', p: 'от 8 000 ₽' }] },
-  { title: 'Пародонтология', items: [{ n: 'Лечение десны', p: '3 500 ₽' }, { n: 'Кюретаж', p: '6 000 ₽' }, { n: 'Шинирование', p: '4 000 ₽' }] },
-  { title: 'Ортодонтия', items: [{ n: 'Брекеты металл', p: 'от 60 000 ₽' }, { n: 'Элайнеры (ряд)', p: 'от 45 000 ₽' }, { n: 'Ретейнер', p: '6 000 ₽' }] }
+  { title: 'Диагностика', items: [{ n: 'Консультация врача', p: '1000 ₽' }, { n: 'Контактная рентгенография (радиовизиограф)', p: '500 ₽' }, { n: 'Взятие образца биологического материала', p: '2000 ₽' }] },
+  { title: 'Гигиена', items: [{ n: 'Плановая гигиена (Air-flow, ультразвук)', p: 'от 3600 ₽' }, { n: 'Комплексная гигиена С.З.О ультразвуком Air-Flow, полировка 2 челюсти', p: '7500 ₽' }, { n: 'Фторповязка', p: '2000 ₽' }] },
+  { title: 'Отбеливание', items: [{ n: 'Кабинетное отбеливание "ZOOM 4 "', p: '30000 ₽' }, { n: 'Кабинетное отбеливание  "FLASH"', p: 'от 20000 ₽' }] },
+  { title: 'Терапия', items: [{ n: 'Лечение кариеса ESTELITE (Япония) Все включено', p: '7950 ₽' }, { n: 'Лечение кариеса ESTELITE (Япония) Все включено 3 поверхности', p: '11000 ₽' }, { n: 'Аппликационная анестезия', p: '500 ₽' }] },
+  { title: 'Эндодонтия', items: [{ n: 'Лечение пульпита 1 канал "временная пломба"', p: '8000 ₽' }, { n: 'Лечение пульпита 3 канала', p: '14690 ₽' }, { n: 'Лечение периодонтита', p: 'от 13700 ₽' }] },
+  { title: 'Хирургия', items: [{ n: 'Удаление подвижного зуба (II-III степени)', p: '2500 ₽' }, { n: 'Удаление зуба сложное', p: '5500 ₽' }, { n: 'Зуб мудрости', p: '5500 ₽' }] },
+  { title: 'Имплантология', items: [{ n: 'Имплантация OSSTEM, (Южная Корея)', p: '32000 ₽' }, { n: 'Имплантация STRAUMANN (Германия), ASTRA (Швеция)', p: '53000 ₽' }, { n: 'Костная пластика', p: '30000 ₽' }] },
+  { title: 'Ортопедия', items: [{ n: 'Металлокерамика', p: '25000 ₽' }, { n: 'Цирконий', p: '26000 ₽' }, { n: 'Безметалловый цельнокерамический E-max', p: '26000 ₽' }] },
+  { title: 'Пародонтология', items: [{ n: 'Шинирование', p: '2900 ₽' }, { n: 'Кюретаж', p: 'от 400 ₽' }, { n: 'Вектор', p: '7770 ₽' }] },
+  { title: 'Ортодонтия', items: [{ n: 'Консультация', p: '1600 ₽' }, { n: 'Брекеты металл', p: 'от 40000 ₽' }, { n: 'Элайнеры курс', p: 'от 100000 ₽' }] }
 ];
 
 function buildPrices() {
